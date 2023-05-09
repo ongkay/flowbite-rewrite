@@ -52,7 +52,12 @@ export const FooterComponent: FC<FooterProps> = ({
   return (
     <footer
       data-testid="flowbite-footer"
-      className={classNames(theme.root.base, bgDark && theme.root.bgDark, container && theme.root.container, className)}
+      className={classNames(
+        theme.root.base,
+        bgDark && theme.root.bgDark,
+        container && theme.root.container,
+        className
+      )}
       {...props}
     >
       {children}

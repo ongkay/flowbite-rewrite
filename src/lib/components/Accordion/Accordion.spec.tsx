@@ -79,7 +79,7 @@ describe('Components / Accordion', () => {
         <>
           <TestAccordion />
           <button role="checkbox">Outside button</button>
-        </>,
+        </>
       );
 
       const outsideButton = screen.getByText('Outside button');
@@ -126,7 +126,7 @@ describe('Components / Accordion', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAccordion />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(accordion()).toHaveClass('text-4xl');
@@ -148,7 +148,7 @@ describe('Components / Accordion', () => {
           <Flowbite theme={{ theme }}>
             <TestAccordion />
             <TestAccordion flush />
-          </Flowbite>,
+          </Flowbite>
         );
 
         const accordions = screen.getAllByTestId('flowbite-accordion');
@@ -173,7 +173,7 @@ describe('Components / Accordion', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAccordion />
-          </Flowbite>,
+          </Flowbite>
         );
 
         content().forEach((content) => {
@@ -211,7 +211,7 @@ describe('Components / Accordion', () => {
           <Flowbite theme={{ theme }}>
             <TestAccordion alwaysOpen />
             <TestAccordion alwaysOpen flush />
-          </Flowbite>,
+          </Flowbite>
         );
 
         const normalTitles = [titles()[0], titles()[1]];

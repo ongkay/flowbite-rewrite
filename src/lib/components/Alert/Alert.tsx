@@ -22,7 +22,8 @@ export interface FlowbiteAlertCloseButtonTheme {
   icon: string;
 }
 
-export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+export interface AlertProps
+  extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
   additionalContent?: ReactNode;
   color?: keyof FlowbiteColors;
   icon?: FC<ComponentProps<'svg'>>;
@@ -53,7 +54,7 @@ export const Alert: FC<AlertProps> = ({
         theme.color[color],
         rounded && theme.rounded,
         withBorderAccent && theme.borderAccent,
-        className,
+        className
       )}
       role="alert"
       {...props}

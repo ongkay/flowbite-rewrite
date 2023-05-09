@@ -28,7 +28,11 @@ export const FooterCopyright: FC<CopyrightProps> = ({
   const theme = mergeDeep(useTheme().theme.footer.copyright, customTheme);
 
   return (
-    <div data-testid="flowbite-footer-copyright" className={classNames(theme.base, className)} {...props}>
+    <div
+      data-testid="flowbite-footer-copyright"
+      className={classNames(theme.base, className)}
+      {...props}
+    >
       © {year}
       {href ? (
         <a href={href} className={theme.href}>

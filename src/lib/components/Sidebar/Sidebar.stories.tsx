@@ -1,6 +1,14 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { BiBuoy } from 'react-icons/bi';
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
+import {
+  HiArrowSmRight,
+  HiChartPie,
+  HiInbox,
+  HiShoppingBag,
+  HiTable,
+  HiUser,
+  HiViewBoards,
+} from 'react-icons/hi';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Sidebar } from './Sidebar';
@@ -224,7 +232,12 @@ CTAButton.args = {
           <Badge color="warning">Beta</Badge>
           <div className="-m-1.5 ml-auto">
             <Button aria-label="Close" outline>
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="h-4 w-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   clipRule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -235,8 +248,8 @@ CTAButton.args = {
           </div>
         </div>
         <p className="mb-3 text-sm text-blue-900 dark:text-blue-400">
-          Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your
-          profile.
+          Preview the new Flowbite dashboard navigation! You can turn the new navigation
+          off for a limited time in your profile.
         </p>
         <a
           className="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"

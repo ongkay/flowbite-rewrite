@@ -22,7 +22,13 @@ export interface RatingProps extends PropsWithChildren<ComponentProps<'div'>> {
   theme?: DeepPartial<FlowbiteRatingTheme>;
 }
 
-const RatingComponent: FC<RatingProps> = ({ children, className, size = 'sm', theme: customTheme = {}, ...props }) => {
+const RatingComponent: FC<RatingProps> = ({
+  children,
+  className,
+  size = 'sm',
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.rating, customTheme);
 
   return (

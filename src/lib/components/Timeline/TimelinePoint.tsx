@@ -39,7 +39,11 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
   return (
     <div
       data-testid="timeline-point"
-      className={classNames(horizontal && theme.horizontal, !horizontal && theme.vertical, className)}
+      className={classNames(
+        horizontal && theme.horizontal,
+        !horizontal && theme.vertical,
+        className
+      )}
       {...props}
     >
       {children}
@@ -49,7 +53,10 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
         </span>
       ) : (
         <div
-          className={classNames(horizontal && theme.marker.base.horizontal, !horizontal && theme.marker.base.vertical)}
+          className={classNames(
+            horizontal && theme.marker.base.horizontal,
+            !horizontal && theme.marker.base.vertical
+          )}
         />
       )}
       {horizontal && <div className={classNames(theme.line)} />}

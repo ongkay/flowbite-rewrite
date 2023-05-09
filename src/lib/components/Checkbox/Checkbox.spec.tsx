@@ -24,7 +24,7 @@ describe.concurrent('Components / Checkbox', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Checkbox />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(checkbox()).toHaveClass('bg-yellow-400 dark:bg-yellow-40');

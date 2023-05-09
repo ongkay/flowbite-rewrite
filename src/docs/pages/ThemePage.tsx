@@ -12,7 +12,8 @@ const ThemePage: FC = () => {
     <div className="mx-auto max-w-4xl dark:text-white">
       <h1 className="mb-3 text-2xl font-bold">Theme</h1>
       <Alert color="warning" icon={HiInformationCircle}>
-        This feature is highly experimental. In the future, it could be deprecated or even suffer several changes.
+        This feature is highly experimental. In the future, it could be deprecated or even
+        suffer several changes.
       </Alert>
       <CustomizeFlowbiteComponentsSection />
       <SwitchToDarkModeSection />
@@ -25,14 +26,17 @@ const CustomizeFlowbiteComponentsSection: FC = () => {
   return (
     <section className="mb-6">
       <header>
-        <h2 className="my-3 text-xl font-bold">Customize Flowbite components using Tailwind CSS</h2>
+        <h2 className="my-3 text-xl font-bold">
+          Customize Flowbite components using Tailwind CSS
+        </h2>
       </header>
       <p className="mb-3">
-        You want to customize Flowbite. Specifically, you would like to remove/add Tailwind CSS classes to one or more
-        components.
+        You want to customize Flowbite. Specifically, you would like to remove/add
+        Tailwind CSS classes to one or more components.
       </p>
       <p className="mb-3">
-        You have a few options. They each have benefits and drawbacks, and you can combine them how you want.
+        You have a few options. They each have benefits and drawbacks, and you can combine
+        them how you want.
       </p>
       <FlowbiteCustomizationOptionsTable />
       <BenefitsAndDrawbacks />
@@ -122,7 +126,10 @@ const BenefitsAndDrawbacks: FC = () => {
             &nbsp;compared to other options
           </span>
         </Benefit>
-        <Drawback>Customizations can quickly become complex and hard to maintain in one large JSON file</Drawback>
+        <Drawback>
+          Customizations can quickly become complex and hard to maintain in one large JSON
+          file
+        </Drawback>
       </ul>
       <h3 className="mt-6 mb-3 text-lg font-bold">
         Benefits &amp; drawbacks of&nbsp;
@@ -133,13 +140,14 @@ const BenefitsAndDrawbacks: FC = () => {
         <Benefit>You don't need to learn how to use the theme API</Benefit>
         <Drawback>
           <span>
-            Some components have nested elements, and you can't customize all of them with one&nbsp;
+            Some components have nested elements, and you can't customize all of them with
+            one&nbsp;
             <strong>className</strong>
           </span>
         </Drawback>
         <Drawback>
-          You need to customize every usage of a component individually, or create and remember to use a custom
-          component of your own
+          You need to customize every usage of a component individually, or create and
+          remember to use a custom component of your own
         </Drawback>
       </ul>
       <h3 className="mt-6 mb-3 text-lg font-bold">
@@ -147,9 +155,12 @@ const BenefitsAndDrawbacks: FC = () => {
         <strong>custom components with theme=&#123;&#125;</strong>
       </h3>
       <ul className="mb-6 list-none [&>li]:mb-2">
-        <Benefit>You can customize one usage of a component that has nested elements</Benefit>
         <Benefit>
-          You can still create a custom component of your own to reuse the customizations rather than repeating them
+          You can customize one usage of a component that has nested elements
+        </Benefit>
+        <Benefit>
+          You can still create a custom component of your own to reuse the customizations
+          rather than repeating them
         </Benefit>
         <Drawback>You add further complexity and indirection to your app</Drawback>
         <Drawback>
@@ -167,11 +178,14 @@ const BenefitsAndDrawbacks: FC = () => {
           <span className="sr-only">Disclaimer:</span>
           <span aria-hidden>*</span>
         </strong>
-        &nbsp;We haven't tested performance at any scale. The <strong>theme=&#123;&#125;</strong> attribute merges the
-        necessary part of the global theme with what is provided in the attribute, which is a deep object merge &mdash;
-        and it isn't fast. It is safe to assume that <strong>theme=&#123;&#125;</strong> attribute will degrade
-        performance with enough components using that technique. It is safe to assume performance won't degrade
-        meaningfully at scale if you just use a global theme and/or <strong>className=&#123;&#125;</strong> attributes.
+        &nbsp;We haven't tested performance at any scale. The{' '}
+        <strong>theme=&#123;&#125;</strong> attribute merges the necessary part of the
+        global theme with what is provided in the attribute, which is a deep object merge
+        &mdash; and it isn't fast. It is safe to assume that{' '}
+        <strong>theme=&#123;&#125;</strong> attribute will degrade performance with enough
+        components using that technique. It is safe to assume performance won't degrade
+        meaningfully at scale if you just use a global theme and/or{' '}
+        <strong>className=&#123;&#125;</strong> attributes.
       </p>
     </div>
   );
@@ -208,8 +222,9 @@ const SwitchToDarkModeSection: FC = () => {
         <h2 className="mb-3 text-xl font-bold">Switch to dark theme</h2>
       </header>
       <p className="mb-3">
-        Since the Flowbite component creates and context to manage the theme, it also enables your application to use
-        the <strong>&lt;DarkThemeToggle/&gt;</strong> component.
+        Since the Flowbite component creates and context to manage the theme, it also
+        enables your application to use the <strong>&lt;DarkThemeToggle/&gt;</strong>{' '}
+        component.
       </p>
       <Card>
         <SyntaxHighlighter language="tsx" style={dracula}>
@@ -223,7 +238,7 @@ const SwitchToDarkModeSection: FC = () => {
               sortProps: false,
               useBooleanShorthandSyntax: false,
               useFragmentShortSyntax: false,
-            },
+            }
           )}
         </SyntaxHighlighter>
       </Card>
@@ -238,8 +253,9 @@ const ReadTheThemeSection: FC = () => {
         <h2 className="mb-3 text-xl font-bold">Read the theme</h2>
       </header>
       <p className="mb-3">
-        You can obtain active Tailwind CSS Classes in the theme via <strong>useTheme</strong> as well as the status of
-        light/dark mode via <strong>useThemeMode</strong>.
+        You can obtain active Tailwind CSS Classes in the theme via{' '}
+        <strong>useTheme</strong> as well as the status of light/dark mode via{' '}
+        <strong>useThemeMode</strong>.
       </p>
       <Card>
         <SyntaxHighlighter language="tsx" style={dracula}>

@@ -36,7 +36,11 @@ export const RatingStar: FC<RatingStarProps> = ({
   return (
     <Icon
       data-testid="flowbite-rating-star"
-      className={classNames(theme.sizes[size], theme[filled ? 'filled' : 'empty'], className)}
+      className={classNames(
+        theme.sizes[size],
+        theme[filled ? 'filled' : 'empty'],
+        className
+      )}
       {...props}
     />
   );

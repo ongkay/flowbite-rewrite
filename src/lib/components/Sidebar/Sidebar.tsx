@@ -50,7 +50,10 @@ const SidebarComponent: FC<SidebarProps> = ({
       <aside
         aria-label="Sidebar"
         hidden={isCollapsed && collapseBehavior === 'hide'}
-        className={classNames(theme.root.base, theme.root.collapsed[isCollapsed ? 'on' : 'off'])}
+        className={classNames(
+          theme.root.base,
+          theme.root.collapsed[isCollapsed ? 'on' : 'off']
+        )}
         {...props}
       >
         <div className={theme.root.inner}>{children}</div>

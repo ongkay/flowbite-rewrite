@@ -20,14 +20,23 @@ export interface TimelineItemProps extends PropsWithChildren, ComponentProps<'li
   theme?: DeepPartial<FlowbiteTimelineItemTheme>;
 }
 
-export const TimelineItem: FC<TimelineItemProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const TimelineItem: FC<TimelineItemProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.timeline.item, customTheme);
   const { horizontal } = useTimelineContext();
 
   return (
     <li
       data-testid="timeline-item"
-      className={classNames(horizontal && theme.root.horizontal, !horizontal && theme.root.vertical, className)}
+      className={classNames(
+        horizontal && theme.root.horizontal,
+        !horizontal && theme.root.vertical,
+        className
+      )}
       {...props}
     >
       {children}

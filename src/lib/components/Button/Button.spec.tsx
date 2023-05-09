@@ -49,7 +49,7 @@ describe('Components / Button', () => {
           <Button>Hi there</Button>
           <Button>Hello there</Button>
           <button type="submit">Submit</button>
-        </>,
+        </>
       );
 
       await user.tab();
@@ -71,7 +71,7 @@ describe('Components / Button', () => {
       render(
         <Button formAction="post.php" type="submit">
           Hi there
-        </Button>,
+        </Button>
       );
 
       expect(button()).toHaveAttribute('formAction', 'post.php');
@@ -116,7 +116,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -134,7 +134,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button color="primary" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -150,7 +150,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button disabled />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -168,7 +168,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button gradientMonochrome="yellowToPink" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -186,7 +186,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button gradientDuoTone="yellowToPink" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(button()).toHaveClass('font-extralight');
@@ -204,7 +204,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button>Hi there</Button>
-        </Flowbite>,
+        </Flowbite>
       );
 
       const buttonInnerContent = screen.getByText('Hi there');
@@ -222,7 +222,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button label="Hi there" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const buttonLabel = screen.getByText('Hi there');
@@ -251,7 +251,7 @@ describe('Components / Button', () => {
           <Button outline pill>
             Outline pill button
           </Button>
-        </Flowbite>,
+        </Flowbite>
       );
 
       const normalButton = screen.getByText('Normal button');
@@ -277,7 +277,7 @@ describe('Components / Button', () => {
         <Flowbite theme={{ theme }}>
           <Button label="Normal button" />
           <Button label="Pill" pill />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const normalButton = buttons()[0];
@@ -299,7 +299,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Button size="xxl">Hello</Button>
-        </Flowbite>,
+        </Flowbite>
       );
 
       const button = screen.getByText('Hello');

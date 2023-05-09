@@ -14,7 +14,12 @@ export interface ModalBodyProps extends PropsWithChildren<ComponentProps<'div'>>
   theme?: DeepPartial<FlowbiteModalBodyTheme>;
 }
 
-export const ModalBody: FC<ModalBodyProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const ModalBody: FC<ModalBodyProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.modal.body, customTheme);
   const { popup } = useModalContext();
 
@@ -25,7 +30,7 @@ export const ModalBody: FC<ModalBodyProps> = ({ children, className, theme: cust
         {
           [theme.popup]: popup,
         },
-        className,
+        className
       )}
       {...props}
     >

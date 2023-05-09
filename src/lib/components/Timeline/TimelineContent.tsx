@@ -31,7 +31,11 @@ export const TimelineContent: FC<TimelineContentProps> = ({
   const { horizontal } = useTimelineContext();
 
   return (
-    <div data-testid="timeline-content" className={classNames(horizontal && theme.root.base, className)} {...props}>
+    <div
+      data-testid="timeline-content"
+      className={classNames(horizontal && theme.root.base, className)}
+      {...props}
+    >
       {children}
     </div>
   );

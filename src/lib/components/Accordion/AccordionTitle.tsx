@@ -41,7 +41,7 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
         theme.base,
         theme.flush[flush ? 'on' : 'off'],
         theme.open[isOpen ? 'on' : 'off'],
-        className,
+        className
       )}
       onClick={onClick}
       type="button"
@@ -53,7 +53,10 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
       {ArrowIcon && (
         <ArrowIcon
           aria-hidden
-          className={classNames(theme.arrow.base, theme.arrow.open[isOpen ? 'on' : 'off'])}
+          className={classNames(
+            theme.arrow.base,
+            theme.arrow.open[isOpen ? 'on' : 'off']
+          )}
           data-testid="flowbite-accordion-arrow"
         />
       )}

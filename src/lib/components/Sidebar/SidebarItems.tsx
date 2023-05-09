@@ -8,7 +8,11 @@ const SidebarItems: FC<SidebarItemsProps> = ({ children, className, ...props }) 
   const theme = useTheme().theme.sidebar.items;
 
   return (
-    <div className={classNames(theme, className)} data-testid="flowbite-sidebar-items" {...props}>
+    <div
+      className={classNames(theme, className)}
+      data-testid="flowbite-sidebar-items"
+      {...props}
+    >
       {children}
     </div>
   );

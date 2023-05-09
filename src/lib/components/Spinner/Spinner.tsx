@@ -22,11 +22,15 @@ export interface FlowbiteSpinnerTheme {
 }
 
 export interface SpinnerColors
-  extends Pick<FlowbiteColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
+  extends Pick<
+    FlowbiteColors,
+    'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'
+  > {
   [key: string]: string;
 }
 
-export interface SpinnerSizes extends Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
+export interface SpinnerSizes
+  extends Pick<FlowbiteSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string;
 }
 
@@ -58,7 +62,7 @@ export const Spinner: FC<SpinnerProps> = ({
           theme.light[light ? 'on' : 'off'].base,
           theme.light[light ? 'on' : 'off'].color[color],
           theme.size[size],
-          className,
+          className
         )}
       >
         <path

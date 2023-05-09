@@ -25,13 +25,16 @@ const ModalPage: FC = () => {
             <Modal.Body>
               <div className="space-y-6">
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  With less than a month to go before the European Union enacts new consumer privacy laws for its
-                  citizens, companies around the world are updating their terms of service agreements to comply.
+                  With less than a month to go before the European Union enacts new
+                  consumer privacy laws for its citizens, companies around the world are
+                  updating their terms of service agreements to comply.
                 </p>
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
-                  meant to ensure a common set of data rights in the European Union. It requires organizations to notify
-                  users as soon as possible of high-risk data breaches that could personally affect them.
+                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes
+                  into effect on May 25 and is meant to ensure a common set of data rights
+                  in the European Union. It requires organizations to notify users as soon
+                  as possible of high-risk data breaches that could personally affect
+                  them.
                 </p>
               </div>
             </Modal.Body>
@@ -50,18 +53,25 @@ const ModalPage: FC = () => {
       code: (
         <>
           <Button onClick={() => setOpenModal('dismissible')}>Toggle modal</Button>
-          <Modal dismissible show={openModal === 'dismissible'} onClose={() => setOpenModal(undefined)}>
+          <Modal
+            dismissible
+            show={openModal === 'dismissible'}
+            onClose={() => setOpenModal(undefined)}
+          >
             <Modal.Header>Terms of Service</Modal.Header>
             <Modal.Body>
               <div className="space-y-6">
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  With less than a month to go before the European Union enacts new consumer privacy laws for its
-                  citizens, companies around the world are updating their terms of service agreements to comply.
+                  With less than a month to go before the European Union enacts new
+                  consumer privacy laws for its citizens, companies around the world are
+                  updating their terms of service agreements to comply.
                 </p>
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
-                  meant to ensure a common set of data rights in the European Union. It requires organizations to notify
-                  users as soon as possible of high-risk data breaches that could personally affect them.
+                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes
+                  into effect on May 25 and is meant to ensure a common set of data rights
+                  in the European Union. It requires organizations to notify users as soon
+                  as possible of high-risk data breaches that could personally affect
+                  them.
                 </p>
               </div>
             </Modal.Body>
@@ -80,7 +90,12 @@ const ModalPage: FC = () => {
       code: (
         <>
           <Button onClick={() => setOpenModal('pop-up')}>Toggle modal</Button>
-          <Modal show={openModal === 'pop-up'} size="md" popup onClose={() => setOpenModal(undefined)}>
+          <Modal
+            show={openModal === 'pop-up'}
+            size="md"
+            popup
+            onClose={() => setOpenModal(undefined)}
+          >
             <Modal.Header />
             <Modal.Body>
               <div className="text-center">
@@ -107,11 +122,18 @@ const ModalPage: FC = () => {
       code: (
         <>
           <Button onClick={() => setOpenModal('form-elements')}>Toggle modal</Button>
-          <Modal show={openModal === 'form-elements'} size="md" popup onClose={() => setOpenModal(undefined)}>
+          <Modal
+            show={openModal === 'form-elements'}
+            size="md"
+            popup
+            onClose={() => setOpenModal(undefined)}
+          >
             <Modal.Header />
             <Modal.Body>
               <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
-                <h3 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+                <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+                  Sign in to our platform
+                </h3>
                 <div>
                   <div className="mb-2 block">
                     <Label htmlFor="email" value="Your email" />
@@ -129,7 +151,10 @@ const ModalPage: FC = () => {
                     <Checkbox id="remember" />
                     <Label htmlFor="remember">Remember me</Label>
                   </div>
-                  <a href="/modal" className="text-sm text-blue-700 hover:underline dark:text-blue-500">
+                  <a
+                    href="/modal"
+                    className="text-sm text-blue-700 hover:underline dark:text-blue-500"
+                  >
                     Lost Password?
                   </a>
                 </div>
@@ -138,7 +163,10 @@ const ModalPage: FC = () => {
                 </div>
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
                   Not registered?&nbsp;
-                  <a href="/modal" className="text-blue-700 hover:underline dark:text-blue-500">
+                  <a
+                    href="/modal"
+                    className="text-blue-700 hover:underline dark:text-blue-500"
+                  >
                     Create account
                   </a>
                 </div>
@@ -154,7 +182,10 @@ const ModalPage: FC = () => {
         <>
           <div className="flex flex-wrap gap-4">
             <div className="w-40">
-              <Select defaultValue="md" onChange={(event) => setModalSize(event.target.value)}>
+              <Select
+                defaultValue="md"
+                onChange={(event) => setModalSize(event.target.value)}
+              >
                 <option value="sm">sm</option>
                 <option value="md">md</option>
                 <option value="lg">lg</option>
@@ -169,18 +200,25 @@ const ModalPage: FC = () => {
             </div>
             <Button onClick={() => setOpenModal('size')}>Toggle modal</Button>
           </div>
-          <Modal show={openModal === 'size'} size={modalSize} onClose={() => setOpenModal(undefined)}>
+          <Modal
+            show={openModal === 'size'}
+            size={modalSize}
+            onClose={() => setOpenModal(undefined)}
+          >
             <Modal.Header>Small modal</Modal.Header>
             <Modal.Body>
               <div className="space-y-6 p-6">
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  With less than a month to go before the European Union enacts new consumer privacy laws for its
-                  citizens, companies around the world are updating their terms of service agreements to comply.
+                  With less than a month to go before the European Union enacts new
+                  consumer privacy laws for its citizens, companies around the world are
+                  updating their terms of service agreements to comply.
                 </p>
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
-                  meant to ensure a common set of data rights in the European Union. It requires organizations to notify
-                  users as soon as possible of high-risk data breaches that could personally affect them.
+                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes
+                  into effect on May 25 and is meant to ensure a common set of data rights
+                  in the European Union. It requires organizations to notify users as soon
+                  as possible of high-risk data breaches that could personally affect
+                  them.
                 </p>
               </div>
             </Modal.Body>
@@ -200,7 +238,10 @@ const ModalPage: FC = () => {
         <>
           <div className="flex flex-wrap gap-4">
             <div className="w-40">
-              <Select defaultValue="center" onChange={(event) => setModalPlacement(event.target.value)}>
+              <Select
+                defaultValue="center"
+                onChange={(event) => setModalPlacement(event.target.value)}
+              >
                 <option value="center">Center</option>
                 <option value="top-left">Top left</option>
                 <option value="top-center">Top center</option>
@@ -214,18 +255,25 @@ const ModalPage: FC = () => {
             </div>
             <Button onClick={() => setOpenModal('placement')}>Toggle modal</Button>
           </div>
-          <Modal show={openModal === 'placement'} position={modalPlacement} onClose={() => setOpenModal(undefined)}>
+          <Modal
+            show={openModal === 'placement'}
+            position={modalPlacement}
+            onClose={() => setOpenModal(undefined)}
+          >
             <Modal.Header>Small modal</Modal.Header>
             <Modal.Body>
               <div className="space-y-6 p-6">
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  With less than a month to go before the European Union enacts new consumer privacy laws for its
-                  citizens, companies around the world are updating their terms of service agreements to comply.
+                  With less than a month to go before the European Union enacts new
+                  consumer privacy laws for its citizens, companies around the world are
+                  updating their terms of service agreements to comply.
                 </p>
                 <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
-                  meant to ensure a common set of data rights in the European Union. It requires organizations to notify
-                  users as soon as possible of high-risk data breaches that could personally affect them.
+                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes
+                  into effect on May 25 and is meant to ensure a common set of data rights
+                  in the European Union. It requires organizations to notify users as soon
+                  as possible of high-risk data breaches that could personally affect
+                  them.
                 </p>
               </div>
             </Modal.Body>

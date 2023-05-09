@@ -10,7 +10,9 @@ export function useSidebarContext(): SidebarContext {
   const context = useContext(SidebarContext);
 
   if (!context) {
-    throw new Error('useSidebarContext should be used within the SidebarContext provider!');
+    throw new Error(
+      'useSidebarContext should be used within the SidebarContext provider!'
+    );
   }
 
   return context;

@@ -5,7 +5,10 @@ import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
 import range from '../../helpers/range';
 import { useTheme } from '../Flowbite/ThemeContext';
-import type { FlowbitePaginationButtonTheme, PaginationButtonProps } from './PaginationButton';
+import type {
+  FlowbitePaginationButtonTheme,
+  PaginationButtonProps,
+} from './PaginationButton';
 import PaginationButton from './PaginationButton';
 
 export interface FlowbitePaginationTheme {
@@ -88,11 +91,15 @@ const PaginationComponent: FC<PaginationProps> = ({
       <ul className={theme.pages.base}>
         <li>
           {renderPaginationButton({
-            className: classNames(classNames(theme.pages.previous.base, showIcon && theme.pages.showIcon)),
+            className: classNames(
+              classNames(theme.pages.previous.base, showIcon && theme.pages.showIcon)
+            ),
             onClick: goToPreviousPage,
             children: (
               <>
-                {showIcon && <HiChevronLeft aria-hidden className={theme.pages.previous.icon} />}
+                {showIcon && (
+                  <HiChevronLeft aria-hidden className={theme.pages.previous.icon} />
+                )}
                 {previousLabel}
               </>
             ),
@@ -113,12 +120,17 @@ const PaginationComponent: FC<PaginationProps> = ({
           ))}
         <li>
           {renderPaginationButton({
-            className: classNames(theme.pages.next.base, showIcon && theme.pages.showIcon),
+            className: classNames(
+              theme.pages.next.base,
+              showIcon && theme.pages.showIcon
+            ),
             onClick: goToNextPage,
             children: (
               <>
                 {nextLabel}
-                {showIcon && <HiChevronRight aria-hidden className={theme.pages.next.icon} />}
+                {showIcon && (
+                  <HiChevronRight aria-hidden className={theme.pages.next.icon} />
+                )}
               </>
             ),
           })}

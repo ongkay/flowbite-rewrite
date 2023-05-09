@@ -10,7 +10,7 @@ describe('Dark theme toggle', () => {
     render(
       <Flowbite>
         <DarkThemeToggle />
-      </Flowbite>,
+      </Flowbite>
     );
 
     await user.tab();

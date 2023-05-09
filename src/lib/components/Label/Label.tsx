@@ -20,7 +20,8 @@ export interface LabelColors extends FlowbiteStateColors {
   default: string;
 }
 
-export interface LabelProps extends PropsWithChildren<Omit<ComponentProps<'label'>, 'color'>> {
+export interface LabelProps
+  extends PropsWithChildren<Omit<ComponentProps<'label'>, 'color'>> {
   color?: keyof LabelColors;
   disabled?: boolean;
   theme?: DeepPartial<FlowbiteLabelTheme>;
@@ -40,7 +41,12 @@ export const Label: FC<LabelProps> = ({
 
   return (
     <label
-      className={classNames(theme.root.base, theme.root.colors[color], disabled ?? theme.root.disabled, className)}
+      className={classNames(
+        theme.root.base,
+        theme.root.colors[color],
+        disabled ?? theme.root.disabled,
+        className
+      )}
       {...props}
     >
       {value ?? children ?? ''}

@@ -28,7 +28,9 @@ describe.concurrent('Components / Label', () => {
 
       const { getByLabelText } = render(<TestForm />);
 
-      inputLabels.forEach((label) => expect(getByLabelText(label)).toHaveAccessibleName(label));
+      inputLabels.forEach((label) =>
+        expect(getByLabelText(label)).toHaveAccessibleName(label)
+      );
     });
   });
 });
@@ -72,7 +74,10 @@ const TestForm = (): JSX.Element => (
     </div>
     <div>
       <Label htmlFor="file">Upload file</Label>
-      <FileInput id="file" helperText="A profile picture is useful to confirm your are logged into your account" />
+      <FileInput
+        id="file"
+        helperText="A profile picture is useful to confirm your are logged into your account"
+      />
     </div>
     <fieldset>
       <legend>Choose your favorite country</legend>

@@ -12,7 +12,9 @@ export interface FlowbiteNavbarLinkTheme {
   disabled: FlowbiteBoolean;
 }
 
-export interface NavbarLinkProps extends PropsWithChildren<ComponentProps<'a'>>, Partial<Pick<LinkProps, 'to'>> {
+export interface NavbarLinkProps
+  extends PropsWithChildren<ComponentProps<'a'>>,
+    Partial<Pick<LinkProps, 'to'>> {
   active?: boolean;
   as?: ElementType;
   disabled?: boolean;
@@ -41,7 +43,7 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
             [theme.active.off]: !active && !disabled,
           },
           theme.disabled[disabled ? 'on' : 'off'],
-          className,
+          className
         )}
         {...props}
       >

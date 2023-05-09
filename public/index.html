@@ -5,7 +5,10 @@
     <link rel="icon" sizes="32x32" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Build websites even faster with components on top of React and Tailwind CSS" />
+    <meta
+      name="description"
+      content="Build websites even faster with components on top of React and Tailwind CSS"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -27,7 +30,8 @@
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
         localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark');
       } else {
@@ -56,7 +60,11 @@
               return s.replace(/~and~/g, '&');
             })
             .join('?');
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
       })(window.location);
     </script>

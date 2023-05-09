@@ -75,22 +75,34 @@ const SidebarCollapse: FC<SidebarCollapseProps> = ({
           <Icon
             aria-hidden
             data-testid="flowbite-sidebar-collapse-icon"
-            className={classNames(theme.icon.base, theme.icon.open[isOpen ? 'on' : 'off'])}
+            className={classNames(
+              theme.icon.base,
+              theme.icon.open[isOpen ? 'on' : 'off']
+            )}
           />
         )}
         {isCollapsed ? (
           <span className="sr-only">{label}</span>
         ) : (
           <>
-            <span data-testid="flowbite-sidebar-collapse-label" className={theme.label.base}>
+            <span
+              data-testid="flowbite-sidebar-collapse-label"
+              className={theme.label.base}
+            >
               {label}
             </span>
             <HiChevronDown aria-hidden className={theme.label.icon} />
           </>
         )}
       </button>
-      <ul aria-labelledby={`flowbite-sidebar-collapse-${id}`} hidden={!isOpen} className={theme.list}>
-        <SidebarItemContext.Provider value={{ isInsideCollapse: true }}>{children}</SidebarItemContext.Provider>
+      <ul
+        aria-labelledby={`flowbite-sidebar-collapse-${id}`}
+        hidden={!isOpen}
+        className={theme.list}
+      >
+        <SidebarItemContext.Provider value={{ isInsideCollapse: true }}>
+          {children}
+        </SidebarItemContext.Provider>
       </ul>
     </Wrapper>
   );

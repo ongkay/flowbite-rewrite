@@ -38,7 +38,10 @@ export interface FlowbiteButtonOutlineTheme extends FlowbiteBoolean {
 }
 
 export interface ButtonColors
-  extends Pick<FlowbiteColors, 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'> {
+  extends Pick<
+    FlowbiteColors,
+    'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'
+  > {
   [key: string]: string;
 }
 
@@ -91,9 +94,12 @@ const ButtonComponent = forwardRef<HTMLButtonElement | HTMLAnchorElement, Button
       theme: customTheme = {},
       ...props
     },
-    ref,
+    ref
   ) => {
-    const { buttonGroup: groupTheme, button: theme } = mergeDeep(useTheme().theme, customTheme);
+    const { buttonGroup: groupTheme, button: theme } = mergeDeep(
+      useTheme().theme,
+      customTheme
+    );
 
     const isLink = typeof href !== 'undefined';
     const Component = isLink ? 'a' : 'button';
@@ -108,14 +114,16 @@ const ButtonComponent = forwardRef<HTMLButtonElement | HTMLAnchorElement, Button
         className={classNames(
           disabled && theme.disabled,
           !gradientDuoTone && !gradientMonochrome && theme.color[color],
-          gradientDuoTone && !gradientMonochrome && theme.gradientDuoTone[gradientDuoTone],
+          gradientDuoTone &&
+            !gradientMonochrome &&
+            theme.gradientDuoTone[gradientDuoTone],
           !gradientDuoTone && gradientMonochrome && theme.gradient[gradientMonochrome],
           groupTheme.position[positionInGroup],
           outline && (theme.outline.color[color] ?? theme.outline.color.default),
           theme.base,
           theme.pill[pill ? 'on' : 'off'],
           fullSized && theme.fullSized,
-          className,
+          className
         )}
         {...theirProps}
       >
@@ -126,7 +134,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement | HTMLAnchorElement, Button
             theme.outline[outline ? 'on' : 'off'],
             theme.outline.pill[outline && pill ? 'on' : 'off'],
             theme.size[size],
-            outline && !theme.outline.color[color] && theme.inner.outline,
+            outline && !theme.outline.color[color] && theme.inner.outline
           )}
         >
           <>
@@ -140,7 +148,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement | HTMLAnchorElement, Button
         </span>
       </Component>
     );
-  },
+  }
 );
 
 ButtonComponent.displayName = 'Button';

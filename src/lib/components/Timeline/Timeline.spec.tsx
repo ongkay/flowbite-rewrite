@@ -44,7 +44,10 @@ describe.concurrent('Components / Timeline', () => {
   });
 });
 
-const TestTimelineNoIcon: FC<TimelineProps> = ({ horizontal, className }): JSX.Element => {
+const TestTimelineNoIcon: FC<TimelineProps> = ({
+  horizontal,
+  className,
+}): JSX.Element => {
   return (
     <Timeline horizontal={horizontal} className={className}>
       <Timeline.Item>
@@ -53,8 +56,8 @@ const TestTimelineNoIcon: FC<TimelineProps> = ({ horizontal, className }): JSX.E
           <Timeline.Time>February 2022</Timeline.Time>
           <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
           <Timeline.Body>
-            Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
-            E-commerce & Marketing pages.
+            Get access to over 20+ pages including a dashboard layout, charts, kanban
+            board, calendar, and pre-order E-commerce & Marketing pages.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
@@ -62,7 +65,10 @@ const TestTimelineNoIcon: FC<TimelineProps> = ({ horizontal, className }): JSX.E
   );
 };
 
-const TestTimelineWithIcon: FC<TimelineProps> = ({ horizontal, className }): JSX.Element => {
+const TestTimelineWithIcon: FC<TimelineProps> = ({
+  horizontal,
+  className,
+}): JSX.Element => {
   return (
     <Timeline horizontal={horizontal} className={className}>
       <Timeline.Item>
@@ -71,8 +77,8 @@ const TestTimelineWithIcon: FC<TimelineProps> = ({ horizontal, className }): JSX
           <Timeline.Time>February 2022</Timeline.Time>
           <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
           <Timeline.Body>
-            Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
-            E-commerce & Marketing pages.
+            Get access to over 20+ pages including a dashboard layout, charts, kanban
+            board, calendar, and pre-order E-commerce & Marketing pages.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>

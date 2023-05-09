@@ -42,7 +42,11 @@ describe('Helper / mergeDeep (Deeply merge two objects)', () => {
 
     const result = mergeDeep(target, source);
 
-    expect(result).to.deep.equal({ foo: { a: 1, b: { c: 3, d: 3, f: { g: 3 } } }, baz: 5, bar: { a: 1 } });
+    expect(result).to.deep.equal({
+      foo: { a: 1, b: { c: 3, d: 3, f: { g: 3 } } },
+      baz: 5,
+      bar: { a: 1 },
+    });
 
     expect(target).to.deep.equal({
       foo: { a: 1, b: { c: 2, f: { g: 3 } } },
@@ -58,7 +62,11 @@ describe('Helper / mergeDeep (Deeply merge two objects)', () => {
     result.baz = 98;
     result.bar.a = 99;
 
-    expect(result).to.deep.equal({ foo: { a: 1, b: { c: 97, d: 3, f: { g: 3 } } }, baz: 98, bar: { a: 99 } });
+    expect(result).to.deep.equal({
+      foo: { a: 1, b: { c: 97, d: 3, f: { g: 3 } } },
+      baz: 98,
+      bar: { a: 99 },
+    });
 
     expect(target).to.deep.equal({
       foo: { a: 1, b: { c: 2, f: { g: 3 } } },

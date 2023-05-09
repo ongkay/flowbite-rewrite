@@ -19,7 +19,11 @@ export interface DarkThemeToggleProps extends ComponentProps<'button'> {
   theme?: DeepPartial<FlowbiteDarkThemeToggleTheme>;
 }
 
-export const DarkThemeToggle: FC<DarkThemeToggleProps> = ({ className, theme: customTheme = {}, ...props }) => {
+export const DarkThemeToggle: FC<DarkThemeToggleProps> = ({
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.darkThemeToggle, customTheme);
 
   const { mode, toggleMode } = useContext(ThemeContext);

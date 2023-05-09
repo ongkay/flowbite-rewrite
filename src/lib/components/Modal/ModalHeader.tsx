@@ -38,12 +38,17 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
         {
           [theme.popup]: popup,
         },
-        className,
+        className
       )}
       {...props}
     >
       <Component className={theme.title}>{children}</Component>
-      <button aria-label="Close" className={theme.close.base} type="button" onClick={onClose}>
+      <button
+        aria-label="Close"
+        className={theme.close.base}
+        type="button"
+        onClick={onClose}
+      >
         <HiOutlineX aria-hidden className={theme.close.icon} />
       </button>
     </div>

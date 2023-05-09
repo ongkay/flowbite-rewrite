@@ -11,7 +11,9 @@ export interface FlowbiteSidebarCTATheme {
   color: FlowbiteSidebarCTAColors;
 }
 
-export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'color'> {
+export interface SidebarCTAProps
+  extends PropsWithChildren,
+    Omit<ComponentProps<'div'>, 'color'> {
   color?: keyof FlowbiteSidebarCTAColors;
   theme?: DeepPartial<FlowbiteSidebarCTATheme>;
 }
@@ -19,7 +21,17 @@ export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<
 export interface FlowbiteSidebarCTAColors
   extends Pick<
     FlowbiteColors,
-    'blue' | 'dark' | 'failure' | 'gray' | 'green' | 'light' | 'purple' | 'red' | 'success' | 'warning' | 'yellow'
+    | 'blue'
+    | 'dark'
+    | 'failure'
+    | 'gray'
+    | 'green'
+    | 'light'
+    | 'purple'
+    | 'red'
+    | 'success'
+    | 'warning'
+    | 'yellow'
   > {
   [key: string]: string;
 }

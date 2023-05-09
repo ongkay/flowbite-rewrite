@@ -1,6 +1,20 @@
 import classNames from 'classnames';
-import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
-import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type {
+  ComponentProps,
+  FC,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+} from 'react';
+import {
+  Children,
+  cloneElement,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import { mergeDeep } from '../../helpers/mergeDeep';
@@ -75,9 +89,9 @@ export const Carousel: FC<CarouselProps> = ({
       Children.map(children as ReactElement[], (child: ReactElement) =>
         cloneElement(child, {
           className: classNames(theme.item.base, child.props.className),
-        }),
+        })
       ),
-    [children, theme.item.base],
+    [children, theme.item.base]
   );
 
   const navigateTo = useCallback(
@@ -85,22 +99,34 @@ export const Carousel: FC<CarouselProps> = ({
       if (!items) return;
       item = (item + items.length) % items.length;
       if (carouselContainer.current) {
-        carouselContainer.current.scrollLeft = carouselContainer.current.clientWidth * item;
+        carouselContainer.current.scrollLeft =
+          carouselContainer.current.clientWidth * item;
       }
       setActiveItem(item);
     },
-    [items],
+    [items]
   );
 
   useEffect(() => {
-    if (carouselContainer.current && !isDragging && carouselContainer.current.scrollLeft !== 0) {
-      setActiveItem(Math.round(carouselContainer.current.scrollLeft / carouselContainer.current.clientWidth));
+    if (
+      carouselContainer.current &&
+      !isDragging &&
+      carouselContainer.current.scrollLeft !== 0
+    ) {
+      setActiveItem(
+        Math.round(
+          carouselContainer.current.scrollLeft / carouselContainer.current.clientWidth
+        )
+      );
     }
   }, [isDragging]);
 
   useEffect(() => {
     if (slide) {
-      const intervalId = setInterval(() => !isDragging && navigateTo(activeItem + 1)(), slideInterval ?? 3000);
+      const intervalId = setInterval(
+        () => !isDragging && navigateTo(activeItem + 1)(),
+        slideInterval ?? 3000
+      );
 
       return () => clearInterval(intervalId);
     }
@@ -109,11 +135,15 @@ export const Carousel: FC<CarouselProps> = ({
   const handleDragging = (dragging: boolean) => () => setIsDragging(dragging);
 
   return (
-    <div className={classNames(theme.root.base, className)} data-testid="carousel" {...props}>
+    <div
+      className={classNames(theme.root.base, className)}
+      data-testid="carousel"
+      {...props}
+    >
       <ScrollContainer
         className={classNames(
           theme.scrollContainer.base,
-          (isDeviceMobile || !isDragging) && theme.scrollContainer.snap,
+          (isDeviceMobile || !isDragging) && theme.scrollContainer.snap
         )}
         draggingClassName="cursor-grab"
         innerRef={carouselContainer}
@@ -139,7 +169,7 @@ export const Carousel: FC<CarouselProps> = ({
               key={index}
               className={classNames(
                 theme.indicators.base,
-                theme.indicators.active[index === activeItem ? 'on' : 'off'],
+                theme.indicators.active[index === activeItem ? 'on' : 'off']
               )}
               onClick={navigateTo(index)}
               data-testid="carousel-indicator"

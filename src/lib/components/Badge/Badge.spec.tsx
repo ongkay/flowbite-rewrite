@@ -10,7 +10,7 @@ describe('Components / Badge', () => {
       render(
         <Badge href="/" icon={HiCheck}>
           A badge with a link
-        </Badge>,
+        </Badge>
       );
 
       expect(link()).toBeInTheDocument();
@@ -35,11 +35,11 @@ describe('Components / Badge', () => {
           <Badge color="primary" href="/" icon={HiCheck}>
             A badge
           </Badge>
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(badge()).toHaveClass(
-        'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-300',
+        'bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-300'
       );
     });
 
@@ -64,7 +64,7 @@ describe('Components / Badge', () => {
         <Flowbite theme={{ theme }}>
           <Badge size="xxl">A badge</Badge>
           <Badge icon={HiCheck} size="xxl" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const badges = screen.getAllByTestId('flowbite-badge');

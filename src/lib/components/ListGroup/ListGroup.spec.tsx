@@ -41,7 +41,7 @@ describe('Components / List group', () => {
       <>
         <TestListGroup />
         <button aria-label="Outside">Outside</button>
-      </>,
+      </>
     );
     const outsideButton = screen.getByLabelText('Outside');
 
@@ -68,7 +68,7 @@ describe('Components / List group', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestListGroup />
-        </Flowbite>,
+        </Flowbite>
       ),
         expect(listGroup()).toHaveClass('text-gray-100');
     });
@@ -96,7 +96,7 @@ describe('Components / List group', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestListGroup />
-        </Flowbite>,
+        </Flowbite>
       );
 
       icons().forEach((icon) => expect(icon).toHaveClass('text-gray-300'));
@@ -105,8 +105,12 @@ describe('Components / List group', () => {
       const activeItem = items()[0];
       const itemWithHref = items()[1];
 
-      [...items().filter((item) => item !== activeItem)].forEach((item) => expect(item).toHaveClass('text-gray-400'));
-      [...items().filter((item) => item !== itemWithHref)].forEach((item) => expect(item).toHaveClass('font-bold'));
+      [...items().filter((item) => item !== activeItem)].forEach((item) =>
+        expect(item).toHaveClass('text-gray-400')
+      );
+      [...items().filter((item) => item !== itemWithHref)].forEach((item) =>
+        expect(item).toHaveClass('font-bold')
+      );
 
       expect(activeItem).toHaveClass('text-gray-200');
       expect(itemWithHref).toHaveClass('font-normal');
@@ -133,4 +137,5 @@ const listGroup = () => screen.getByRole('list');
 
 const icons = () => screen.getAllByTestId('flowbite-list-group-item-icon');
 
-const items = () => screen.getAllByRole('listitem').map((li) => li.firstElementChild) as HTMLElement[];
+const items = () =>
+  screen.getAllByRole('listitem').map((li) => li.firstElementChild) as HTMLElement[];

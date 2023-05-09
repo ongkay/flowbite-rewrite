@@ -17,14 +17,9 @@ export interface FooterIconProps extends PropsWithChildren {
   theme?: DeepPartial<FlowbiteFooterIconTheme>;
 }
 
-export const FooterIcon: FC<FooterIconProps & ComponentProps<'a'> & ComponentProps<'svg'>> = ({
-  ariaLabel,
-  className,
-  href,
-  icon: Icon,
-  theme: customTheme = {},
-  ...props
-}) => {
+export const FooterIcon: FC<
+  FooterIconProps & ComponentProps<'a'> & ComponentProps<'svg'>
+> = ({ ariaLabel, className, href, icon: Icon, theme: customTheme = {}, ...props }) => {
   const theme = mergeDeep(useTheme().theme.footer.icon, customTheme);
 
   return (

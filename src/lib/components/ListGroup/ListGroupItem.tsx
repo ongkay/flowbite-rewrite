@@ -24,7 +24,9 @@ export interface ListGroupItemProps extends PropsWithChildren {
   theme?: DeepPartial<FlowbiteListGroupItemTheme>;
 }
 
-export const ListGroupItem: FC<ListGroupItemProps & ComponentProps<'a'> & ComponentProps<'button'>> = ({
+export const ListGroupItem: FC<
+  ListGroupItemProps & ComponentProps<'a'> & ComponentProps<'button'>
+> = ({
   active: isActive,
   children,
   className,
@@ -48,11 +50,17 @@ export const ListGroupItem: FC<ListGroupItemProps & ComponentProps<'a'> & Compon
         className={classNames(
           theme.link.active[isActive ? 'on' : 'off'],
           theme.link.base,
-          theme.link.href[isLink ? 'on' : 'off'],
+          theme.link.href[isLink ? 'on' : 'off']
         )}
         {...props}
       >
-        {Icon && <Icon aria-hidden data-testid="flowbite-list-group-item-icon" className={theme.link.icon} />}
+        {Icon && (
+          <Icon
+            aria-hidden
+            data-testid="flowbite-list-group-item-icon"
+            className={theme.link.icon}
+          />
+        )}
         {children}
       </Component>
     </li>

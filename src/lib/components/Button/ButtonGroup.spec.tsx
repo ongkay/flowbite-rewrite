@@ -13,7 +13,7 @@ describe('Components / Button group', () => {
           <Button>One</Button>
           <Button>Two</Button>
           <Button>Three</Button>
-        </Button.Group>,
+        </Button.Group>
       );
 
       expect(group()).toBeInTheDocument();
@@ -25,7 +25,7 @@ describe('Components / Button group', () => {
           <Button>One</Button>
           <Button>Two</Button>
           <Button>Three</Button>
-        </Button.Group>,
+        </Button.Group>
       ),
         expect(group()).toHaveAccessibleName('My group');
     });
@@ -41,7 +41,7 @@ describe('Components / Button group', () => {
           <Button onClick={onClick}>One</Button>
           <Button>Two</Button>
           <Button>Three</Button>
-        </Button.Group>,
+        </Button.Group>
       );
 
       const firstButton = buttons()[0];
@@ -60,7 +60,7 @@ describe('Components / Button group', () => {
             <Button>Inside</Button>
           </Button.Group>
           <Button>Outside</Button>
-        </>,
+        </>
       ),
         await user.tab();
 
@@ -79,7 +79,7 @@ describe('Components / Button group', () => {
           <Button>One</Button>
           <Button>Two</Button>
           <Button>Three</Button>
-        </Button.Group>,
+        </Button.Group>
       );
 
       const positionClasses = defaultTheme.buttonGroup.position;
@@ -105,7 +105,7 @@ describe('Components / Button group', () => {
             <Button>Two</Button>
             <Button>Three</Button>
           </Button.Group>
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(group()).toHaveClass('text-gray-400');
@@ -125,7 +125,7 @@ describe('Components / Button group', () => {
             <Button>Two</Button>
             <Button>Three</Button>
           </Button.Group>
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(group()).toHaveClass('text-gray-400');

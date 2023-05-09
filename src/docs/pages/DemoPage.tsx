@@ -26,7 +26,18 @@ export const DemoPage: FC<DemoPageProps> = ({ examples }) => {
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-8 dark:text-white">
       {examples.map(
-        ({ title, content, code, rawCode, showCode = true, codeClassName, codeStringifierOptions }, index) => (
+        (
+          {
+            title,
+            content,
+            code,
+            rawCode,
+            showCode = true,
+            codeClassName,
+            codeStringifierOptions,
+          },
+          index
+        ) => (
           <div key={index} className="flex flex-col gap-2">
             <span className="text-2xl font-bold">{title}</span>
             {content && <div className="py-4">{content}</div>}
@@ -47,7 +58,7 @@ export const DemoPage: FC<DemoPageProps> = ({ examples }) => {
               </Card>
             </div>
           </div>
-        ),
+        )
       )}
     </div>
   );

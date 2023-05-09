@@ -38,7 +38,8 @@ export interface FlowbiteFloatingArrowTheme {
   };
 }
 
-export interface FloatingProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style'>> {
+export interface FloatingProps
+  extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style'>> {
   animation?: false | `duration-${number}`;
   arrow?: boolean;
   closeRequestKey?: string;
@@ -109,7 +110,11 @@ export const Floating: FC<FloatingProps> = ({
 
   return (
     <>
-      <div className={theme.target} {...getReferenceProps({ ref: reference })} data-testid="flowbite-tooltip-target">
+      <div
+        className={theme.target}
+        {...getReferenceProps({ ref: reference })}
+        data-testid="flowbite-tooltip-target"
+      >
         {children}
       </div>
       <div
@@ -120,7 +125,7 @@ export const Floating: FC<FloatingProps> = ({
             animation && `${theme.animation} ${animation}`,
             !open && theme.hidden,
             theme.style[style],
-            className,
+            className
           ),
           ref: floating,
           style: {
@@ -146,7 +151,8 @@ export const Floating: FC<FloatingProps> = ({
               left: arrowX ?? ' ',
               right: ' ',
               bottom: ' ',
-              [getArrowPlacement({ placement: floatingTooltip.placement })]: theme.arrow.placement,
+              [getArrowPlacement({ placement: floatingTooltip.placement })]:
+                theme.arrow.placement,
             }}
           >
             &nbsp;

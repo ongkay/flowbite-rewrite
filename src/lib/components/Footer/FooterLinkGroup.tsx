@@ -26,7 +26,11 @@ export const FooterLinkGroup: FC<FooterLinkGroupProps> = ({
   const theme = mergeDeep(useTheme().theme.footer.groupLink, customTheme);
 
   return (
-    <ul data-testid="footer-groupLink" className={classNames(theme.base, col && theme.col, className)} {...props}>
+    <ul
+      data-testid="footer-groupLink"
+      className={classNames(theme.base, col && theme.col, className)}
+      {...props}
+    >
       {children}
     </ul>
   );

@@ -24,7 +24,7 @@ describe.concurrent('Components / Radio', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Radio />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(radio()).toHaveClass('bg-yellow-400 dark:bg-yellow-40');

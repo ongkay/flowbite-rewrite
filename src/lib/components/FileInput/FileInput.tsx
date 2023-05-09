@@ -27,7 +27,8 @@ export interface FlowbiteFileInputFieldInputTheme {
   sizes: TextInputSizes;
 }
 
-export interface FileInputProps extends Omit<ComponentProps<'input'>, 'type' | 'ref' | 'color'> {
+export interface FileInputProps
+  extends Omit<ComponentProps<'input'>, 'type' | 'ref' | 'color'> {
   color?: keyof TextInputColors;
   helperText?: ReactNode;
   sizing?: keyof TextInputSizes;
@@ -35,7 +36,17 @@ export interface FileInputProps extends Omit<ComponentProps<'input'>, 'type' | '
 }
 
 export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
-  ({ className, color = 'gray', helperText, sizing = 'md', theme: customTheme = {}, ...props }, ref) => {
+  (
+    {
+      className,
+      color = 'gray',
+      helperText,
+      sizing = 'md',
+      theme: customTheme = {},
+      ...props
+    },
+    ref
+  ) => {
     const theme = mergeDeep(useTheme().theme.fileInput, customTheme);
 
     return (
@@ -46,7 +57,7 @@ export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
               className={classNames(
                 theme.field.input.base,
                 theme.field.input.colors[color],
-                theme.field.input.sizes[sizing],
+                theme.field.input.sizes[sizing]
               )}
               {...props}
               type="file"
@@ -57,5 +68,5 @@ export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
         {helperText && <HelperText color={color}>{helperText}</HelperText>}
       </>
     );
-  },
+  }
 );

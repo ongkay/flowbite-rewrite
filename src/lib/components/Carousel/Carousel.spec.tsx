@@ -63,7 +63,7 @@ describe('Components / Carousel', () => {
       render(
         <Carousel leftControl={'<'} rightControl={'>'}>
           {items}
-        </Carousel>,
+        </Carousel>
       );
 
       expect(screen.getByText(/</)).toBeInTheDocument();
@@ -145,7 +145,8 @@ describe('Components / Carousel', () => {
 });
 
 const activeIndicatorClasses = 'bg-white dark:bg-gray-800';
-const nonActiveIndicatorClasses = 'bg-white/50 hover:bg-white dark:bg-gray-800/50 dark:hover:bg-gray-800';
+const nonActiveIndicatorClasses =
+  'bg-white/50 hover:bg-white dark:bg-gray-800/50 dark:hover:bg-gray-800';
 
 const items = [
   <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" />,

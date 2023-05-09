@@ -40,10 +40,14 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
           outline,
           pill,
           positionInGroup:
-            index === 0 ? 'start' : index === (children as ReactElement<ButtonProps>[]).length - 1 ? 'end' : 'middle',
-        }),
+            index === 0
+              ? 'start'
+              : index === (children as ReactElement<ButtonProps>[]).length - 1
+              ? 'end'
+              : 'middle',
+        })
       ),
-    [children, outline, pill],
+    [children, outline, pill]
   );
   const theme = mergeDeep(useTheme().theme.buttonGroup, customTheme);
 

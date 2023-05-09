@@ -2,7 +2,11 @@ import classNames from 'classnames';
 import type { ComponentProps, FC, PropsWithChildren } from 'react';
 import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
-import type { FlowbiteBoolean, FlowbiteColors, FlowbiteSizes } from '../Flowbite/FlowbiteTheme';
+import type {
+  FlowbiteBoolean,
+  FlowbiteColors,
+  FlowbiteSizes,
+} from '../Flowbite/FlowbiteTheme';
 import { useTheme } from '../Flowbite/ThemeContext';
 
 export interface FlowbiteBadgeTheme {
@@ -25,7 +29,8 @@ export interface BadgeSizes extends Pick<FlowbiteSizes, 'xs' | 'sm'> {
   [key: string]: string;
 }
 
-export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'color'>> {
+export interface BadgeProps
+  extends PropsWithChildren<Omit<ComponentProps<'span'>, 'color'>> {
   color?: keyof FlowbiteColors;
   href?: string;
   icon?: FC<ComponentProps<'svg'>>;
@@ -52,12 +57,18 @@ export const Badge: FC<BadgeProps> = ({
         theme.root.color[color],
         theme.icon[Icon ? 'on' : 'off'],
         theme.root.size[size],
-        className,
+        className
       )}
       data-testid="flowbite-badge"
       {...props}
     >
-      {Icon && <Icon aria-hidden className={theme.icon.size[size]} data-testid="flowbite-badge-icon" />}
+      {Icon && (
+        <Icon
+          aria-hidden
+          className={theme.icon.size[size]}
+          data-testid="flowbite-badge-icon"
+        />
+      )}
       {children && <span>{children}</span>}
     </span>
   );

@@ -1,5 +1,10 @@
 import type { FC } from 'react';
-import { HiCloudDownload, HiInbox, HiOutlineAdjustments, HiUserCircle } from 'react-icons/hi';
+import {
+  HiCloudDownload,
+  HiInbox,
+  HiOutlineAdjustments,
+  HiUserCircle,
+} from 'react-icons/hi';
 import { ListGroup } from '../../lib';
 import type { CodeExample } from './DemoPage';
 import { DemoPage } from './DemoPage';

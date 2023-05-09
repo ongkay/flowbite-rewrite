@@ -53,7 +53,7 @@ export const Card: FC<CardProps> = ({
         theme.root.base,
         theme.root.horizontal[horizontal ? 'on' : 'off'],
         href && theme.root.href,
-        className,
+        className
       )}
       {...theirProps}
     >
@@ -61,7 +61,10 @@ export const Card: FC<CardProps> = ({
         <img
           alt={imgAlt ?? ''}
           src={imgSrc}
-          className={classNames(theme.img.base, theme.img.horizontal[horizontal ? 'on' : 'off'])}
+          className={classNames(
+            theme.img.base,
+            theme.img.horizontal[horizontal ? 'on' : 'off']
+          )}
         />
       )}
       <div className={theme.root.children}>{children}</div>

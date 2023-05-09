@@ -35,7 +35,9 @@ const DropdownPage: FC = () => {
         <Dropdown label="Dropdown button">
           <Dropdown.Header>
             <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">bonnie@flowbite.com</span>
+            <span className="block truncate text-sm font-medium">
+              bonnie@flowbite.com
+            </span>
           </Dropdown.Header>
           <Dropdown.Item>Dashboard</Dropdown.Item>
           <Dropdown.Item>Settings</Dropdown.Item>
@@ -62,7 +64,9 @@ const DropdownPage: FC = () => {
         <Dropdown label="Dropdown">
           <Dropdown.Header>
             <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">bonnie@flowbite.com</span>
+            <span className="block truncate text-sm font-medium">
+              bonnie@flowbite.com
+            </span>
           </Dropdown.Header>
           <Dropdown.Item icon={HiViewGrid}>Dashboard</Dropdown.Item>
           <Dropdown.Item icon={HiCog}>Settings</Dropdown.Item>

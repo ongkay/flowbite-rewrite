@@ -15,7 +15,12 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<PaginationProps> = ({ currentPage = 1, layout = 'pagination', totalPages = 100, ...rest }) => {
+const Template: Story<PaginationProps> = ({
+  currentPage = 1,
+  layout = 'pagination',
+  totalPages = 100,
+  ...rest
+}) => {
   const [page, setPage] = useState(currentPage);
 
   const onPageChange = (page: number) => {
@@ -27,7 +32,13 @@ const Template: Story<PaginationProps> = ({ currentPage = 1, layout = 'paginatio
   }, [currentPage]);
 
   return (
-    <Pagination {...rest} currentPage={page} layout={layout} onPageChange={onPageChange} totalPages={totalPages} />
+    <Pagination
+      {...rest}
+      currentPage={page}
+      layout={layout}
+      onPageChange={onPageChange}
+      totalPages={totalPages}
+    />
   );
 };
 

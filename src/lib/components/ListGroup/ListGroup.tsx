@@ -19,7 +19,12 @@ export interface ListGroupProps extends PropsWithChildren, ComponentProps<'ul'> 
   theme?: DeepPartial<FlowbiteListGroupTheme>;
 }
 
-const ListGroupComponent: FC<ListGroupProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+const ListGroupComponent: FC<ListGroupProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.listGroup, customTheme);
 
   return (

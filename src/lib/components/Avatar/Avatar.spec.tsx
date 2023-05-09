@@ -19,7 +19,7 @@ describe('Components / Avatar', () => {
       render(
         <Flowbite theme={{ theme }}>
           <Avatar size="xxl" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(img()).toHaveClass('h-64 w-64');
@@ -43,7 +43,7 @@ describe('Components / Avatar', () => {
             img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
             alt="Your avatar"
           />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(img()).toHaveClass('ring-rose-500 dark:ring-rose-400');
@@ -54,7 +54,7 @@ describe('Components / Avatar', () => {
       render(
         <Flowbite>
           <Avatar placeholderInitials="RR" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(initialsPlaceholderText()).toHaveTextContent('RR');
@@ -64,7 +64,7 @@ describe('Components / Avatar', () => {
       render(
         <Flowbite>
           <Avatar placeholderInitials="RR" bordered color="success" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(initialsPlaceholder()).toHaveClass('ring-green-500 dark:ring-green-500');
@@ -75,7 +75,7 @@ describe('Components / Avatar', () => {
       render(
         <Flowbite>
           <Avatar img={(props) => <img referrerPolicy="no-referrer" {...props} />} />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(img()).toHaveAttribute('referrerpolicy', 'no-referrer');
@@ -86,7 +86,7 @@ describe('Components / Avatar', () => {
       render(
         <Flowbite>
           <Avatar status="online" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(status()).toHaveClass('bg-green-400');
@@ -96,5 +96,7 @@ describe('Components / Avatar', () => {
 
 const status = () => screen.getByTestId('flowbite-avatar-status');
 const img = () => screen.getByTestId('flowbite-avatar-img');
-const initialsPlaceholder = () => screen.getByTestId('flowbite-avatar-initials-placeholder');
-const initialsPlaceholderText = () => screen.getByTestId('flowbite-avatar-initials-placeholder-text');
+const initialsPlaceholder = () =>
+  screen.getByTestId('flowbite-avatar-initials-placeholder');
+const initialsPlaceholderText = () =>
+  screen.getByTestId('flowbite-avatar-initials-placeholder-text');

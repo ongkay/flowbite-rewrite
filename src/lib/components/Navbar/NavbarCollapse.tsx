@@ -16,7 +16,12 @@ export interface NavbarCollapseProps extends PropsWithChildren<ComponentProps<'d
   theme?: DeepPartial<FlowbiteNavbarCollapseTheme>;
 }
 
-export const NavbarCollapse: FC<NavbarCollapseProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const NavbarCollapse: FC<NavbarCollapseProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const { isOpen } = useNavbarContext();
   const theme = mergeDeep(useTheme().theme.navbar.collapse, customTheme);
 

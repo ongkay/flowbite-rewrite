@@ -25,7 +25,11 @@ export const getMiddleware = ({
   return middleware;
 };
 
-export const getPlacement = ({ placement }: { placement: 'auto' | Placement }): Placement | undefined => {
+export const getPlacement = ({
+  placement,
+}: {
+  placement: 'auto' | Placement;
+}): Placement | undefined => {
   return placement === 'auto' ? undefined : placement;
 };
 

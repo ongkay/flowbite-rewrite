@@ -14,7 +14,12 @@ export interface TableHeadProps extends PropsWithChildren, ComponentProps<'thead
   theme?: DeepPartial<FlowbiteTableHeadTheme>;
 }
 
-export const TableHead: FC<TableHeadProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const TableHead: FC<TableHeadProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.table, customTheme);
 
   return (

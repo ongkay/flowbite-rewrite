@@ -36,14 +36,22 @@ const durationClasses: Record<Duration, string> = {
   1000: 'duration-1000',
 };
 
-const ToastComponent: FC<ToastProps> = ({ children, className, duration = 300, theme: customTheme = {}, ...props }) => {
+const ToastComponent: FC<ToastProps> = ({
+  children,
+  className,
+  duration = 300,
+  theme: customTheme = {},
+  ...props
+}) => {
   const [isClosed, setIsClosed] = useState(false);
   const [isRemoved, setIsRemoved] = useState(false);
 
   const theme = mergeDeep(useTheme().theme.toast, customTheme);
 
   return (
-    <ToastContext.Provider value={{ duration, isClosed, isRemoved, setIsClosed, setIsRemoved }}>
+    <ToastContext.Provider
+      value={{ duration, isClosed, isRemoved, setIsClosed, setIsRemoved }}
+    >
       <div
         data-testid="flowbite-toast"
         className={classNames(
@@ -51,7 +59,7 @@ const ToastComponent: FC<ToastProps> = ({ children, className, duration = 300, t
           durationClasses[duration],
           { [theme.root.closed]: isClosed },
           { [theme.root.removed]: isRemoved },
-          className,
+          className
         )}
         {...props}
       >

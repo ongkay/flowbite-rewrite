@@ -20,7 +20,9 @@ export const Root: FC = () => {
             className="mr-6 h-6 w-6 cursor-pointer text-gray-600 dark:text-gray-400"
             onClick={() => setCollapsed(!collapsed)}
           />
-          <span className="text-xl font-semibold dark:text-white">Flowbite React Components</span>
+          <span className="text-xl font-semibold dark:text-white">
+            Flowbite React Components
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <a

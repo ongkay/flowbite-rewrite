@@ -53,7 +53,7 @@ describe('Components / Breadcrumb', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestBreadcrumb />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(breadcrumbList()).toHaveClass('gap-6');
@@ -76,7 +76,7 @@ describe('Components / Breadcrumb', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestBreadcrumb />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(items()[0]).toHaveClass('justify-center');

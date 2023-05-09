@@ -13,7 +13,9 @@ describe('Components / Spinner', () => {
     });
 
     it('should be able to set no `role`', () => {
-      const { getByLabelText } = render(<Spinner aria-label="My spinner" role={undefined} />);
+      const { getByLabelText } = render(
+        <Spinner aria-label="My spinner" role={undefined} />
+      );
 
       const spinner = getByLabelText('My spinner');
 
@@ -33,8 +35,8 @@ describe('Components / Spinner', () => {
         render(
           <Flowbite theme={{ theme }}>
             <Spinner />
-          </Flowbite>,
-        ),
+          </Flowbite>
+        )
       );
 
       expect(spinner.firstElementChild).toHaveClass('text-gray-100');
@@ -53,8 +55,8 @@ describe('Components / Spinner', () => {
         render(
           <Flowbite theme={{ theme }}>
             <Spinner color="primary" />
-          </Flowbite>,
-        ),
+          </Flowbite>
+        )
       );
 
       expect(spinner.firstElementChild).toHaveClass('text-gray-200');
@@ -77,8 +79,8 @@ describe('Components / Spinner', () => {
         render(
           <Flowbite theme={{ theme }}>
             <Spinner color="success" light />
-          </Flowbite>,
-        ),
+          </Flowbite>
+        )
       );
 
       expect(spinner.firstElementChild).toHaveClass('text-gray-300');
@@ -86,4 +88,5 @@ describe('Components / Spinner', () => {
   });
 });
 
-const getSpinner = ({ getByRole }: Pick<RenderResult, 'getByRole'>): HTMLElement => getByRole('status');
+const getSpinner = ({ getByRole }: Pick<RenderResult, 'getByRole'>): HTMLElement =>
+  getByRole('status');

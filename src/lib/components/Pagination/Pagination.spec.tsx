@@ -65,13 +65,27 @@ describe('Pagination', () => {
 
   describe('Props', () => {
     it('should not display numbered buttons when `layout="navigation"`', () => {
-      render(<Pagination currentPage={1} layout="navigation" onPageChange={() => undefined} totalPages={5} />);
+      render(
+        <Pagination
+          currentPage={1}
+          layout="navigation"
+          onPageChange={() => undefined}
+          totalPages={5}
+        />
+      );
 
       expect(pages()).toHaveLength(0);
     });
 
     it('should display numbered buttons when `layout="table"`', () => {
-      render(<Pagination currentPage={1} layout="table" onPageChange={() => undefined} totalPages={5} />);
+      render(
+        <Pagination
+          currentPage={1}
+          layout="table"
+          onPageChange={() => undefined}
+          totalPages={5}
+        />
+      );
 
       expect(pages()).toHaveLength(0);
     });
@@ -85,7 +99,7 @@ describe('Pagination', () => {
           totalPages={5}
           previousLabel="Go back"
           nextLabel="Go forward"
-        ></Pagination>,
+        ></Pagination>
       );
 
       expect(previousButton()).toHaveTextContent('Go back');
@@ -105,7 +119,9 @@ const PaginationTest: FC = () => {
     setPage(page);
   }, [page]);
 
-  return <Pagination currentPage={page} onPageChange={onPageChange} showIcons totalPages={5} />;
+  return (
+    <Pagination currentPage={page} onPageChange={onPageChange} showIcons totalPages={5} />
+  );
 };
 
 const buttons = () => screen.getAllByRole('button');

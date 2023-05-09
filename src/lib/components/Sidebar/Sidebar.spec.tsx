@@ -21,7 +21,14 @@ describe('Components / Sidebar', () => {
 
     it('should use text content as accessible name in `Sidebar.Collapse` and `Sidebar.Item`', async () => {
       const user = userEvent.setup();
-      const itemLabels = ['Dashboard', 'E-commerce', 'Products', 'Services', 'Inbox', 'My heading'];
+      const itemLabels = [
+        'Dashboard',
+        'E-commerce',
+        'Products',
+        'Services',
+        'Inbox',
+        'My heading',
+      ];
 
       render(<TestSidebar />);
 
@@ -79,7 +86,7 @@ describe('Keyboard interactions', () => {
       <>
         <TestSidebar />
         <button role="checkbox">Outside</button>
-      </>,
+      </>
     );
 
     const outside = screen.getByText('Outside');
@@ -141,7 +148,7 @@ describe('Theme', () => {
       <Flowbite theme={{ theme }}>
         <TestSidebar aria-label="not-collapsed" />
         <TestSidebar aria-label="collapsed" collapsed />
-      </Flowbite>,
+      </Flowbite>
     );
     const sidebar = getByLabelText('not-collapsed');
     const inner = sidebar.firstElementChild;
@@ -179,12 +186,14 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </Flowbite>
       );
       const labelIcons = collapseLabels().map((label) => label.nextElementSibling);
 
       collapseButtons().forEach((button) => expect(button).toHaveClass('text-gray-100'));
-      collapseIcons().forEach((icon) => expect(icon).toHaveClass('text-gray-200 bg-gray-100'));
+      collapseIcons().forEach((icon) =>
+        expect(icon).toHaveClass('text-gray-200 bg-gray-100')
+      );
       collapseLabels().forEach((label) => expect(label).toHaveClass('text-gray-300'));
       labelIcons.forEach((labelicon) => expect(labelicon).toHaveClass('text-gray-400'));
 
@@ -212,7 +221,7 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(cta()).toHaveClass('bg-gray-100 text-gray-100');
@@ -244,16 +253,22 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar collapsed />
-        </Flowbite>,
+        </Flowbite>
       );
       const theItems = items()
         .map((item) => item.firstElementChild)
         .map((item) => item?.firstElementChild)
-        .filter((item) => item?.tagName.toLocaleLowerCase() !== 'button') as HTMLElement[];
+        .filter(
+          (item) => item?.tagName.toLocaleLowerCase() !== 'button'
+        ) as HTMLElement[];
       const activeItems = screen.getAllByTestId('active-item');
       const activeIcons = activeItems.map((item) => item.firstElementChild);
-      const inactiveIcons = [...collapseIcons().filter((icon) => !activeIcons.includes(icon))];
-      const inactiveItems = [...theItems.filter((item) => item !== null && !activeItems.includes(item))];
+      const inactiveIcons = [
+        ...collapseIcons().filter((icon) => !activeIcons.includes(icon)),
+      ];
+      const inactiveItems = [
+        ...theItems.filter((item) => item !== null && !activeItems.includes(item)),
+      ];
 
       activeIcons.forEach((icon) => expect(icon).toHaveClass('bg-gray-300'));
       activeItems.forEach((item) => expect(item).toHaveClass('text-gray-100'));
@@ -276,10 +291,12 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </Flowbite>
       );
 
-      itemsContainers().forEach((container) => expect(container).toHaveClass('text-gray-100'));
+      itemsContainers().forEach((container) =>
+        expect(container).toHaveClass('text-gray-100')
+      );
     });
   });
 
@@ -294,7 +311,7 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </Flowbite>
       ),
         itemGroups().forEach((group) => expect(group).toHaveClass('text-gray-100'));
     });
@@ -318,7 +335,7 @@ describe('Theme', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestSidebar />
-        </Flowbite>,
+        </Flowbite>
       ),
         expect(logo()).toHaveClass('text-gray-100');
     });
@@ -332,7 +349,14 @@ const TestSidebar: FC<SidebarProps> = ({ ...props }) => (
     </Sidebar.Logo>
     <Sidebar.Items>
       <Sidebar.ItemGroup>
-        <Sidebar.Item active data-testid="active-item" href="#" icon={HiChartPie} label="3" labelColor="success">
+        <Sidebar.Item
+          active
+          data-testid="active-item"
+          href="#"
+          icon={HiChartPie}
+          label="3"
+          labelColor="success"
+        >
           Dashboard
         </Sidebar.Item>
         <Sidebar.Collapse aria-label="E-commerce" icon={HiShoppingBag}>

@@ -15,7 +15,10 @@ export interface FlowbiteProgressTheme {
 }
 
 export interface ProgressColor
-  extends Pick<FlowbiteColors, 'dark' | 'blue' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple'> {
+  extends Pick<
+    FlowbiteColors,
+    'dark' | 'blue' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple'
+  > {
   [key: string]: string;
 }
 
@@ -48,7 +51,13 @@ export const Progress: FC<ProgressProps> = ({
 
   return (
     <>
-      <div aria-label={label} aria-valuenow={progress} id={id} role="progressbar" {...props}>
+      <div
+        aria-label={label}
+        aria-valuenow={progress}
+        id={id}
+        role="progressbar"
+        {...props}
+      >
         {label && labelPosition === 'outside' && (
           <div className={theme.label}>
             <span>{label}</span>

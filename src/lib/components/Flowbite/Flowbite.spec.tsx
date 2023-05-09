@@ -23,7 +23,7 @@ describe('Components / Flowbite', () => {
       render(
         <Flowbite>
           <TestComponent />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const { theme, mode, toggleMode } = context;
@@ -36,7 +36,7 @@ describe('Components / Flowbite', () => {
       render(
         <Flowbite theme={{ theme: customTheme }}>
           <TestComponent />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const { theme } = context;
@@ -49,7 +49,7 @@ describe('Components / Flowbite', () => {
       render(
         <Flowbite>
           <TestComponent />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const { mode, toggleMode } = context;
@@ -71,7 +71,7 @@ describe('Components / Flowbite', () => {
       render(
         <Flowbite theme={{ dark: true }}>
           <TestComponent />
-        </Flowbite>,
+        </Flowbite>
       );
 
       const { mode } = context;

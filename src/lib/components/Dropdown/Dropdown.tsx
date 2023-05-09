@@ -1,7 +1,18 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
+import type {
+  ComponentProps,
+  FC,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+} from 'react';
 import React, { Children, useCallback, useMemo, useState } from 'react';
-import { HiOutlineChevronDown, HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineChevronUp } from 'react-icons/hi';
+import {
+  HiOutlineChevronDown,
+  HiOutlineChevronLeft,
+  HiOutlineChevronRight,
+  HiOutlineChevronUp,
+} from 'react-icons/hi';
 import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
 import { uuid } from '../../helpers/uuid';
@@ -97,16 +108,22 @@ const DropdownComponent: FC<DropdownProps> = ({
       }
       return node;
     },
-    [dismissOnClick],
+    [dismissOnClick]
   );
 
   const content = useMemo(
-    () => <ul className={theme.content}>{Children.map(children, attachCloseListener)}</ul>,
-    [attachCloseListener, children, theme.content],
+    () => (
+      <ul className={theme.content}>{Children.map(children, attachCloseListener)}</ul>
+    ),
+    [attachCloseListener, children, theme.content]
   );
 
   const TriggerWrapper: FC<ButtonProps> = ({ children }) =>
-    inline ? <button className={theme.inlineWrapper}>{children}</button> : <Button {...buttonProps}>{children}</Button>;
+    inline ? (
+      <button className={theme.inlineWrapper}>{children}</button>
+    ) : (
+      <Button {...buttonProps}>{children}</Button>
+    );
 
   return (
     <Floating

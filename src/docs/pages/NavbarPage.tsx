@@ -11,8 +11,14 @@ const NavbarPage: FC = () => {
       code: (
         <Navbar fluid rounded>
           <Navbar.Brand as={Link} to="/navbars">
-            <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span>
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+              Flowbite
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse>
@@ -35,8 +41,14 @@ const NavbarPage: FC = () => {
       code: (
         <Navbar fluid rounded>
           <Navbar.Brand href="https://flowbite.com/">
-            <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span>
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+              Flowbite
+            </span>
           </Navbar.Brand>
           <div className="flex md:order-2">
             <Button>Get started</Button>
@@ -60,8 +72,14 @@ const NavbarPage: FC = () => {
       code: (
         <Navbar fluid rounded>
           <Navbar.Brand href="https://flowbite.com/">
-            <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span>
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+              Flowbite
+            </span>
           </Navbar.Brand>
           <div className="flex md:order-2">
             <Dropdown
@@ -77,7 +95,9 @@ const NavbarPage: FC = () => {
             >
               <Dropdown.Header>
                 <span className="block text-sm">Bonnie Green</span>
-                <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+                <span className="block truncate text-sm font-medium">
+                  name@flowbite.com
+                </span>
               </Dropdown.Header>
               <Dropdown.Item>Dashboard</Dropdown.Item>
               <Dropdown.Item>Settings</Dropdown.Item>

@@ -14,11 +14,13 @@ export interface FlowbiteHelperTextRootTheme {
   colors: HelperColors;
 }
 
-export interface HelperColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface HelperColors
+  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
   [key: string]: string;
 }
 
-export interface HelperTextProps extends PropsWithChildren<Omit<ComponentProps<'p'>, 'color'>> {
+export interface HelperTextProps
+  extends PropsWithChildren<Omit<ComponentProps<'p'>, 'color'>> {
   color?: keyof HelperColors;
   theme?: DeepPartial<FlowbiteHelperTextTheme>;
   value?: string;
@@ -35,7 +37,10 @@ export const HelperText: FC<HelperTextProps> = ({
   const theme = mergeDeep(useTheme().theme.helperText, customTheme);
 
   return (
-    <p className={classNames(theme.root.base, theme.root.colors[color], className)} {...props}>
+    <p
+      className={classNames(theme.root.base, theme.root.colors[color], className)}
+      {...props}
+    >
       {value ?? children ?? ''}
     </p>
   );

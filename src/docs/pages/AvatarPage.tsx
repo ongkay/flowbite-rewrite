@@ -9,7 +9,10 @@ const AvatarPage: FC = () => {
       title: 'Default Avatar',
       code: (
         <div className="flex flex-wrap gap-2">
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            rounded
+          />
           <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" />
         </div>
       ),
@@ -18,8 +21,15 @@ const AvatarPage: FC = () => {
       title: 'Bordered Avatar',
       code: (
         <div className="flex flex-wrap gap-2">
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded bordered />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            rounded
+            bordered
+          />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            bordered
+          />
         </div>
       ),
     },
@@ -28,7 +38,12 @@ const AvatarPage: FC = () => {
       code: (
         <>
           <div className="flex flex-wrap gap-2">
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded bordered color="gray" />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded
+              bordered
+              color="gray"
+            />
             <Avatar
               img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               rounded
@@ -47,15 +62,40 @@ const AvatarPage: FC = () => {
               bordered
               color="success"
             />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded bordered color="pink" />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded
+              bordered
+              color="pink"
+            />
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered color="gray" />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered color="light" />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered color="purple" />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered color="success" />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" bordered color="pink" />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              bordered
+              color="gray"
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              bordered
+              color="light"
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              bordered
+              color="purple"
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              bordered
+              color="success"
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              bordered
+              color="pink"
+            />
           </div>
         </>
       ),
@@ -84,7 +124,10 @@ const AvatarPage: FC = () => {
                   media="(min-width: 480px)"
                   srcSet="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                 />
-                <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" {...props} />
+                <img
+                  src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                  {...props}
+                />
               </picture>
             )}
           />
@@ -150,7 +193,10 @@ const AvatarPage: FC = () => {
       title: 'Dot indicator',
       code: (
         <div className="flex flex-wrap gap-2">
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" status="online" />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            status="online"
+          />
           <Avatar
             img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
             rounded
@@ -176,17 +222,53 @@ const AvatarPage: FC = () => {
       code: (
         <>
           <Avatar.Group>
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded stacked />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded
+              stacked
+            />
           </Avatar.Group>
           <Avatar.Group>
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-1.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-2.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-3.jpg" rounded stacked />
-            <Avatar img="https://flowbite.com/docs/images/people/profile-picture-4.jpg" rounded stacked />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+              rounded
+              stacked
+            />
+            <Avatar
+              img="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+              rounded
+              stacked
+            />
             <Avatar.Counter total={99} href="#" />
           </Avatar.Group>
         </>
@@ -195,10 +277,15 @@ const AvatarPage: FC = () => {
     {
       title: 'Avatar text',
       code: (
-        <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded>
+        <Avatar
+          img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+          rounded
+        >
           <div className="space-y-1 font-medium dark:text-white">
             <div>Jese Leos</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Joined in August 2014</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              Joined in August 2014
+            </div>
           </div>
         </Avatar>
       ),
@@ -208,7 +295,11 @@ const AvatarPage: FC = () => {
       code: (
         <Dropdown
           label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+            <Avatar
+              alt="User settings"
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded
+            />
           }
           arrowIcon={false}
           inline
@@ -229,11 +320,26 @@ const AvatarPage: FC = () => {
       title: 'Sizing',
       code: (
         <div className="flex flex-wrap items-center gap-2">
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="xs" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="sm" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="md" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="lg" />
-          <Avatar img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="xl" />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            size="xs"
+          />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            size="sm"
+          />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            size="md"
+          />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            size="lg"
+          />
+          <Avatar
+            img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+            size="xl"
+          />
         </div>
       ),
     },

@@ -13,7 +13,7 @@ describe('Components / Footer', () => {
           <Footer.Brand alt="Flowbite" href="https://flowbite.com" src="">
             Flowbite
           </Footer.Brand>
-        </Footer>,
+        </Footer>
       );
       const a = screen.getByTestId('flowbite-footer-brand');
       const img = screen.getByAltText('Flowbite');
@@ -29,7 +29,7 @@ describe('Components / Footer', () => {
         <Footer.Brand alt="Flowbite" src="">
           Flowbite
         </Footer.Brand>
-      </Footer>,
+      </Footer>
     );
     const img = screen.getByAltText('Flowbite');
 
@@ -42,7 +42,7 @@ describe('Components / Footer', () => {
         <Footer.Copyright by="Flowbite" href="https://flowbite.com" year={2022}>
           Flowbite
         </Footer.Copyright>
-      </Footer>,
+      </Footer>
     );
 
     expect(copyright()).toContainElement(screen.getByRole('link'));
@@ -52,7 +52,7 @@ describe('Components / Footer', () => {
     render(
       <Footer>
         <Footer.Icon ariaLabel="Icon" href="/" icon={BsFacebook} />
-      </Footer>,
+      </Footer>
     );
     const iconLink = screen.getAllByRole('link')[0];
 
@@ -71,7 +71,7 @@ describe('Components / Footer', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestFooter />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(footer()).toHaveClass('text-gray-100');
@@ -88,7 +88,7 @@ describe('Components / Footer', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestFooter />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(footer()).toHaveClass('text-gray-100');
@@ -105,7 +105,7 @@ describe('Components / Footer', () => {
       render(
         <Flowbite theme={{ theme }}>
           <TestFooter />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(footer()).toHaveClass('text-gray-100');
@@ -129,7 +129,7 @@ describe('Components / Footer', () => {
                 Flowbite
               </Footer.Brand>
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(brand()).toHaveClass('text-gray-100');
@@ -143,10 +143,12 @@ describe('Components / Footer', () => {
                 Flowbite
               </Footer.Brand>
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
-        expect(screen.getByTestId('flowbite-footer-brand-span')).toHaveClass('text-gray-300');
+        expect(screen.getByTestId('flowbite-footer-brand-span')).toHaveClass(
+          'text-gray-300'
+        );
       });
     });
 
@@ -168,11 +170,13 @@ describe('Components / Footer', () => {
                 Test
               </Footer.Copyright>
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(copyright()).toHaveClass('text-gray-100');
-        expect(screen.getByTestId('flowbite-footer-copyright-span')).toHaveClass('text-gray-300');
+        expect(screen.getByTestId('flowbite-footer-copyright-span')).toHaveClass(
+          'text-gray-300'
+        );
 
         cleanup();
         render(
@@ -182,7 +186,7 @@ describe('Components / Footer', () => {
                 Test
               </Footer.Copyright>
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(screen.getByRole('link')).toHaveClass('text-gray-200');
@@ -204,7 +208,7 @@ describe('Components / Footer', () => {
             <Footer>
               <Footer.Icon ariaLabel="Icon" href="/" icon={BsFacebook} />
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(icon()).toHaveClass('text-gray-800');
@@ -215,7 +219,7 @@ describe('Components / Footer', () => {
             <Footer>
               <Footer.Icon ariaLabel="Icon" icon={BsFacebook} />
             </Footer>
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(icon()).toHaveClass('text-gray-900');
@@ -234,7 +238,7 @@ describe('Components / Footer', () => {
         render(
           <Flowbite theme={{ theme }}>
             <Footer.Title title="Flowbite" />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(title()).toHaveClass('text-gray-100');

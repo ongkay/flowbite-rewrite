@@ -12,7 +12,12 @@ export interface TimelineTimeProps extends PropsWithChildren, ComponentProps<'ti
   theme?: DeepPartial<FlowbiteTimelineTimeTheme>;
 }
 
-export const TimelineTime: FC<TimelineTimeProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const TimelineTime: FC<TimelineTimeProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.timeline.item.content, customTheme).time;
 
   return (

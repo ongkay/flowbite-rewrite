@@ -20,6 +20,13 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ className, theme: customTheme = {}, ...props }, ref) => {
     const theme = mergeDeep(useTheme().theme.checkbox, customTheme);
 
-    return <input ref={ref} type="checkbox" className={classNames(theme.root.base, className)} {...props} />;
-  },
+    return (
+      <input
+        ref={ref}
+        type="checkbox"
+        className={classNames(theme.root.base, className)}
+        {...props}
+      />
+    );
+  }
 );

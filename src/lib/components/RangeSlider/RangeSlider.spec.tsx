@@ -38,7 +38,7 @@ describe('Components / Button', () => {
           <RangeSlider />
           <RangeSlider />
           <RangeSlider />
-        </>,
+        </>
       );
 
       const rangeSliderElements = rangeSliders();
@@ -149,7 +149,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <RangeSlider />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(rangeSliderContainer()).toHaveClass('dummy-range-slider-base-classes');
@@ -167,10 +167,12 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <RangeSlider />
-        </Flowbite>,
+        </Flowbite>
       );
 
-      expect(rangeSliderContainer().childNodes[0]).toHaveClass('dummy-range-slider-field-base-classes');
+      expect(rangeSliderContainer().childNodes[0]).toHaveClass(
+        'dummy-range-slider-field-base-classes'
+      );
     });
 
     it('should use `base` classes of input', () => {
@@ -187,7 +189,7 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <RangeSlider />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(rangeSlider()).toHaveClass('dummy-range-slider-field-input-base-classes');
@@ -209,10 +211,12 @@ describe('Components / Button', () => {
       render(
         <Flowbite theme={{ theme }}>
           <RangeSlider sizing="lg" />
-        </Flowbite>,
+        </Flowbite>
       );
 
-      expect(rangeSlider()).toHaveClass('dummy-range-slider-field-input-sizes-lg-classes');
+      expect(rangeSlider()).toHaveClass(
+        'dummy-range-slider-field-input-sizes-lg-classes'
+      );
     });
   });
 
@@ -238,7 +242,9 @@ describe('Components / Button', () => {
 
       render(<RangeSlider theme={theme} />);
 
-      expect(rangeSliderContainer().childNodes[0]).toHaveClass('dummy-range-slider-field-base-classes');
+      expect(rangeSliderContainer().childNodes[0]).toHaveClass(
+        'dummy-range-slider-field-base-classes'
+      );
     });
 
     it('should use `base` classes of input', () => {
@@ -268,7 +274,9 @@ describe('Components / Button', () => {
 
       render(<RangeSlider sizing="lg" theme={theme} />);
 
-      expect(rangeSlider()).toHaveClass('dummy-range-slider-field-input-sizes-lg-classes');
+      expect(rangeSlider()).toHaveClass(
+        'dummy-range-slider-field-input-sizes-lg-classes'
+      );
     });
   });
 });

@@ -16,7 +16,14 @@ describe('Components / Toggle switch', () => {
     });
 
     it('should have an accessible name', () => {
-      render(<ToggleSwitch checked={false} label="Enable notifications" name="notifications" onChange={console.log} />);
+      render(
+        <ToggleSwitch
+          checked={false}
+          label="Enable notifications"
+          name="notifications"
+          onChange={console.log}
+        />
+      );
 
       expect(toggleSwitch()).toHaveAccessibleName('Enable notifications');
     });
@@ -27,7 +34,12 @@ describe('Components / Toggle switch', () => {
       const user = userEvent.setup();
       const handleChange = vi.fn();
       render(
-        <ToggleSwitch checked={false} label="Enable notifications" name="notifications" onChange={handleChange} />,
+        <ToggleSwitch
+          checked={false}
+          label="Enable notifications"
+          name="notifications"
+          onChange={handleChange}
+        />
       );
 
       await user.tab();
@@ -49,8 +61,13 @@ describe('Components / Toggle switch', () => {
             handleSubmit();
           }}
         >
-          <ToggleSwitch checked={false} label="Enable notifications" name="notifications" onChange={console.log} />
-        </form>,
+          <ToggleSwitch
+            checked={false}
+            label="Enable notifications"
+            name="notifications"
+            onChange={console.log}
+          />
+        </form>
       );
 
       await user.tab();
@@ -98,7 +115,14 @@ describe('Components / Toggle switch', () => {
 
     it('should focus when `Tab` is pressed', async () => {
       const user = userEvent.setup();
-      render(<ToggleSwitch checked={false} label="Enable notifications" name="notifications" onChange={console.log} />);
+      render(
+        <ToggleSwitch
+          checked={false}
+          label="Enable notifications"
+          name="notifications"
+          onChange={console.log}
+        />
+      );
 
       await user.tab();
 
@@ -109,9 +133,14 @@ describe('Components / Toggle switch', () => {
       const user = userEvent.setup();
       render(
         <form>
-          <ToggleSwitch checked={false} label="Enable notifications" name="notifications" onChange={console.log} />
+          <ToggleSwitch
+            checked={false}
+            label="Enable notifications"
+            name="notifications"
+            onChange={console.log}
+          />
           <TextInput type="text" />
-        </form>,
+        </form>
       );
 
       await user.tab();
@@ -124,7 +153,14 @@ describe('Components / Toggle switch', () => {
 
   describe('Props', () => {
     it('should allow HTML attributes for `<button>`s', () => {
-      render(<ToggleSwitch checked={false} label="Enable" onChange={console.log} type="submit" />);
+      render(
+        <ToggleSwitch
+          checked={false}
+          label="Enable"
+          onChange={console.log}
+          type="submit"
+        />
+      );
 
       expect(toggleSwitch()).toHaveAttribute('type', 'submit');
     });
@@ -141,8 +177,13 @@ describe('Components / Toggle switch', () => {
       };
       render(
         <Flowbite theme={{ theme }}>
-          <ToggleSwitch checked={false} label="Enable" onChange={console.log} type="submit" />
-        </Flowbite>,
+          <ToggleSwitch
+            checked={false}
+            label="Enable"
+            onChange={console.log}
+            type="submit"
+          />
+        </Flowbite>
       );
 
       expect(toggleSwitch()).toHaveClass('text-blue-100');
@@ -161,9 +202,20 @@ describe('Components / Toggle switch', () => {
       };
       render(
         <Flowbite theme={{ theme }}>
-          <ToggleSwitch checked={false} label="Enable" onChange={console.log} type="submit" />
-          <ToggleSwitch disabled checked={false} label="Enable" onChange={console.log} type="submit" />
-        </Flowbite>,
+          <ToggleSwitch
+            checked={false}
+            label="Enable"
+            onChange={console.log}
+            type="submit"
+          />
+          <ToggleSwitch
+            disabled
+            checked={false}
+            label="Enable"
+            onChange={console.log}
+            type="submit"
+          />
+        </Flowbite>
       );
       const activeToggleSwitch = toggleSwitches()[0];
       const disabledToggleSwitch = toggleSwitches()[1];
@@ -182,8 +234,13 @@ describe('Components / Toggle switch', () => {
       };
       render(
         <Flowbite theme={{ theme }}>
-          <ToggleSwitch checked={false} label="Enable" onChange={console.log} type="submit" />
-        </Flowbite>,
+          <ToggleSwitch
+            checked={false}
+            label="Enable"
+            onChange={console.log}
+            type="submit"
+          />
+        </Flowbite>
       );
 
       expect(label()).toHaveClass('test-label');
@@ -205,7 +262,7 @@ describe('Components / Toggle switch', () => {
       render(
         <Flowbite theme={{ theme }}>
           <ToggleSwitch checked label="Enable" onChange={console.log} type="submit" />
-        </Flowbite>,
+        </Flowbite>
       );
 
       expect(toggle()).toHaveClass('h-6 w-11 bg-pink-700');

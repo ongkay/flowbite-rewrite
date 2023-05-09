@@ -9,7 +9,9 @@ export interface FlowbiteNavbarBrandTheme {
   base: string;
 }
 
-export interface NavbarBrandProps extends PropsWithChildren<ComponentProps<'a'>>, Partial<Pick<LinkProps, 'to'>> {
+export interface NavbarBrandProps
+  extends PropsWithChildren<ComponentProps<'a'>>,
+    Partial<Pick<LinkProps, 'to'>> {
   as?: ElementType;
   href?: string;
   theme?: DeepPartial<FlowbiteNavbarBrandTheme>;

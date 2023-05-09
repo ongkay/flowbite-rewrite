@@ -3,7 +3,11 @@ import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react';
 import { forwardRef } from 'react';
 import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
-import type { FlowbiteBoolean, FlowbiteColors, FlowbiteSizes } from '../Flowbite/FlowbiteTheme';
+import type {
+  FlowbiteBoolean,
+  FlowbiteColors,
+  FlowbiteSizes,
+} from '../Flowbite/FlowbiteTheme';
 import { useTheme } from '../Flowbite/ThemeContext';
 import { HelperText } from '../HelperText';
 
@@ -27,7 +31,8 @@ export interface FlowbiteSelectTheme {
   };
 }
 
-export interface SelectColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface SelectColors
+  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
   [key: string]: string;
 }
 
@@ -35,7 +40,9 @@ export interface SelectSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string;
 }
 
-export interface SelectProps extends PropsWithChildren, Omit<ComponentProps<'select'>, 'color' | 'ref'> {
+export interface SelectProps
+  extends PropsWithChildren,
+    Omit<ComponentProps<'select'>, 'color' | 'ref'> {
   addon?: ReactNode;
   color?: keyof SelectColors;
   helperText?: ReactNode;
@@ -59,7 +66,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       theme: customTheme = {},
       ...props
     },
-    ref,
+    ref
   ) => {
     const theme = mergeDeep(useTheme().theme.select, customTheme);
 
@@ -79,7 +86,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
               theme.field.select.withIcon[Icon ? 'on' : 'off'],
               theme.field.select.withAddon[addon ? 'on' : 'off'],
               theme.field.select.withShadow[shadow ? 'on' : 'off'],
-              theme.field.select.sizes[sizing],
+              theme.field.select.sizes[sizing]
             )}
             {...props}
             ref={ref}
@@ -90,5 +97,5 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         </div>
       </div>
     );
-  },
+  }
 );

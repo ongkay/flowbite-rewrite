@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
+import type {
+  ComponentProps,
+  ElementType,
+  FC,
+  PropsWithChildren,
+  ReactNode,
+} from 'react';
 import { forwardRef, useId } from 'react';
 import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
@@ -44,15 +50,19 @@ export interface SidebarItemLabelColors extends Pick<FlowbiteColors, 'gray'> {
   [key: string]: string;
 }
 
-const ListItem: FC<PropsWithChildren<{ id: string; isCollapsed: boolean; tooltipChildren: ReactNode | undefined }>> = ({
-  id,
-  isCollapsed,
-  tooltipChildren,
-  children: wrapperChildren,
-}) => (
+const ListItem: FC<
+  PropsWithChildren<{
+    id: string;
+    isCollapsed: boolean;
+    tooltipChildren: ReactNode | undefined;
+  }>
+> = ({ id, isCollapsed, tooltipChildren, children: wrapperChildren }) => (
   <li>
     {isCollapsed ? (
-      <Tooltip content={<TooltipContent id={id}>{tooltipChildren}</TooltipContent>} placement="right">
+      <Tooltip
+        content={<TooltipContent id={id}>{tooltipChildren}</TooltipContent>}
+        placement="right"
+      >
         {wrapperChildren}
       </Tooltip>
     ) : (
@@ -92,7 +102,7 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
       theme: customTheme = {},
       ...props
     },
-    ref,
+    ref
   ) => {
     const id = useId();
     const { isCollapsed } = useSidebarContext();
@@ -108,7 +118,7 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
             theme.base,
             isActive && theme.active,
             !isCollapsed && isInsideCollapse && theme.collapsed?.insideCollapse,
-            className,
+            className
           )}
           {...props}
         >
@@ -120,18 +130,25 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
             />
           )}
           {isCollapsed && !Icon && (
-            <span className={theme.collapsed?.noIcon}>{(children as string).charAt(0).toLocaleUpperCase() ?? '?'}</span>
+            <span className={theme.collapsed?.noIcon}>
+              {(children as string).charAt(0).toLocaleUpperCase() ?? '?'}
+            </span>
           )}
           {!isCollapsed && <Children id={id}>{children}</Children>}
           {!isCollapsed && label && (
-            <Badge color={labelColor} data-testid="flowbite-sidebar-label" hidden={isCollapsed} className={theme.label}>
+            <Badge
+              color={labelColor}
+              data-testid="flowbite-sidebar-label"
+              hidden={isCollapsed}
+              className={theme.label}
+            >
               {label}
             </Badge>
           )}
         </Component>
       </ListItem>
     );
-  },
+  }
 );
 
 SidebarItem.displayName = 'Sidebar.Item';

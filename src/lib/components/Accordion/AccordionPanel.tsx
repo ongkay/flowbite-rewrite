@@ -20,5 +20,9 @@ export const AccordionPanel: FC<AccordionPanelProps> = ({ children, ...props }) 
       }
     : props;
 
-  return <AccordionPanelContext.Provider value={provider}>{children}</AccordionPanelContext.Provider>;
+  return (
+    <AccordionPanelContext.Provider value={provider}>
+      {children}
+    </AccordionPanelContext.Provider>
+  );
 };

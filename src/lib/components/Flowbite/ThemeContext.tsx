@@ -30,8 +30,13 @@ export function useTheme(): ThemeContextProps {
   return useContext(ThemeContext);
 }
 
-export const useThemeMode = (): [Mode, React.Dispatch<React.SetStateAction<Mode>>, () => void] => {
-  const userPreferenceIsDark = () => window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+export const useThemeMode = (): [
+  Mode,
+  React.Dispatch<React.SetStateAction<Mode>>,
+  () => void
+] => {
+  const userPreferenceIsDark = () =>
+    window.matchMedia?.('(prefers-color-scheme: dark)').matches;
   const getPrefersColorScheme = (): Mode => (userPreferenceIsDark() ? 'dark' : 'light');
   const onToggleMode = () => {
     const newMode = mode === 'dark' ? 'light' : 'dark';
@@ -39,7 +44,9 @@ export const useThemeMode = (): [Mode, React.Dispatch<React.SetStateAction<Mode>
     setModeState(newMode);
   };
   const { mode: contextMode, toggleMode = onToggleMode } = useContext(ThemeContext);
-  const [mode, setModeState] = useState<Mode>(contextMode ? contextMode : getPrefersColorScheme());
+  const [mode, setModeState] = useState<Mode>(
+    contextMode ? contextMode : getPrefersColorScheme()
+  );
   const setMode = useCallback((mode: Mode) => {
     if (!windowExists()) {
       return;

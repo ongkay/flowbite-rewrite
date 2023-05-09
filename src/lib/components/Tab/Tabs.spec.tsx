@@ -198,7 +198,8 @@ const TestTabsLastActiveItem: FC = () => (
 
 const tabs = () => screen.getAllByRole('tab');
 
-const activeTab = () => tabs().find((tab) => tab.getAttribute('aria-selected') === 'true');
+const activeTab = () =>
+  tabs().find((tab) => tab.getAttribute('aria-selected') === 'true');
 
 const firstTab = () => tabs()[0];
 

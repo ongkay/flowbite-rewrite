@@ -27,7 +27,12 @@ const FormsPage: FC = () => {
             <div className="mb-2 block">
               <Label htmlFor="email1" value="Your email" />
             </div>
-            <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+            <TextInput
+              id="email1"
+              type="email"
+              placeholder="name@flowbite.com"
+              required
+            />
           </div>
           <div>
             <div className="mb-2 block">
@@ -73,9 +78,20 @@ const FormsPage: FC = () => {
       code: (
         <div className="flex flex-col gap-4">
           <Label htmlFor="disabledInput1">API token</Label>
-          <TextInput type="text" id="disabledInput1" placeholder="Disabled input" disabled />
+          <TextInput
+            type="text"
+            id="disabledInput1"
+            placeholder="Disabled input"
+            disabled
+          />
           <Label htmlFor="disabledInput2">Personal access token</Label>
-          <TextInput type="text" id="disabledInput2" placeholder="Disabled readonly input" disabled readOnly />
+          <TextInput
+            type="text"
+            id="disabledInput2"
+            placeholder="Disabled readonly input"
+            disabled
+            readOnly
+          />
         </div>
       ),
     },
@@ -87,7 +103,13 @@ const FormsPage: FC = () => {
             <div className="mb-2 block">
               <Label htmlFor="email2" value="Your email" />
             </div>
-            <TextInput id="email2" type="email" placeholder="name@flowbite.com" required shadow />
+            <TextInput
+              id="email2"
+              type="email"
+              placeholder="name@flowbite.com"
+              required
+              shadow
+            />
           </div>
           <div>
             <div className="mb-2 block">
@@ -105,7 +127,10 @@ const FormsPage: FC = () => {
             <Checkbox id="agree" />
             <Label htmlFor="agree">
               I agree with the&nbsp;
-              <a href="/forms" className="text-blue-600 hover:underline dark:text-blue-500">
+              <a
+                href="/forms"
+                className="text-blue-600 hover:underline dark:text-blue-500"
+              >
                 terms and conditions
               </a>
             </Label>
@@ -129,7 +154,10 @@ const FormsPage: FC = () => {
             helperText={
               <>
                 We’ll never share your details. Read our
-                <a href="/forms" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/forms"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Privacy Policy
                 </a>
                 .
@@ -146,7 +174,13 @@ const FormsPage: FC = () => {
           <div className="mb-2 block">
             <Label htmlFor="email4" value="Your email" />
           </div>
-          <TextInput id="email4" type="email" icon={HiMail} placeholder="name@flowbite.com" required />
+          <TextInput
+            id="email4"
+            type="email"
+            icon={HiMail}
+            placeholder="name@flowbite.com"
+            required
+          />
         </div>
       ),
     },
@@ -157,7 +191,13 @@ const FormsPage: FC = () => {
           <div className="mb-2 block">
             <Label htmlFor="email4" value="Your email" />
           </div>
-          <TextInput id="email4" type="email" rightIcon={HiMail} placeholder="name@flowbite.com" required />
+          <TextInput
+            id="email4"
+            type="email"
+            rightIcon={HiMail}
+            placeholder="name@flowbite.com"
+            required
+          />
         </div>
       ),
     },
@@ -249,19 +289,34 @@ const FormsPage: FC = () => {
             <div className="mb-2 block">
               <Label htmlFor="input-success" color="success" value="Success" />
             </div>
-            <TextInput id="input-success" placeholder="Input Success" required color="success" />
+            <TextInput
+              id="input-success"
+              placeholder="Input Success"
+              required
+              color="success"
+            />
           </div>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="input-failure" color="failure" value="Failure" />
             </div>
-            <TextInput id="input-failure" placeholder="Input Failure" required color="failure" />
+            <TextInput
+              id="input-failure"
+              placeholder="Input Failure"
+              required
+              color="failure"
+            />
           </div>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="input-warning" color="warning" value="Warning" />
             </div>
-            <TextInput id="input-warning" placeholder="Input Warning" required color="warning" />
+            <TextInput
+              id="input-warning"
+              placeholder="Input Warning"
+              required
+              color="warning"
+            />
           </div>
         </div>
       ),
@@ -301,7 +356,10 @@ const FormsPage: FC = () => {
             <Checkbox id="accept" defaultChecked />
             <Label htmlFor="accept">
               I agree to the&nbsp;
-              <a href="/forms" className="text-blue-600 hover:underline dark:text-blue-500">
+              <a
+                href="/forms"
+                className="text-blue-600 hover:underline dark:text-blue-500"
+              >
                 terms and conditions
               </a>
             </Label>
@@ -322,7 +380,8 @@ const FormsPage: FC = () => {
               <Label htmlFor="shipping">Free shipping via Flowbite</Label>
               <div className="text-gray-500 dark:text-gray-300">
                 <span className="text-xs font-normal">
-                  For orders shipped from Flowbite from <span className="font-medium">€ 25</span> in books or&nbsp;
+                  For orders shipped from Flowbite from{' '}
+                  <span className="font-medium">€ 25</span> in books or&nbsp;
                   <span>€ 29</span> on other categories
                 </span>
               </div>
@@ -374,7 +433,10 @@ const FormsPage: FC = () => {
           <div className="mb-2 block">
             <Label htmlFor="file" value="Upload file" />
           </div>
-          <FileInput id="file" helperText="A profile picture is useful to confirm your are logged into your account" />
+          <FileInput
+            id="file"
+            helperText="A profile picture is useful to confirm your are logged into your account"
+          />
         </div>
       ),
     },
@@ -383,8 +445,17 @@ const FormsPage: FC = () => {
       code: (
         <div className="flex flex-col gap-4" id="toggle">
           <ToggleSwitch checked={switch1} label="Toggle me" onChange={setSwitch1} />
-          <ToggleSwitch checked={switch2} label="Toggle me (checked)" onChange={setSwitch2} />
-          <ToggleSwitch checked={false} disabled label="Toggle me (disabled)" onChange={() => undefined} />
+          <ToggleSwitch
+            checked={switch2}
+            label="Toggle me (checked)"
+            onChange={setSwitch2}
+          />
+          <ToggleSwitch
+            checked={false}
+            disabled
+            label="Toggle me (disabled)"
+            onChange={() => undefined}
+          />
         </div>
       ),
     },

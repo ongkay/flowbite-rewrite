@@ -6,7 +6,11 @@ import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
 import windowExists from '../../helpers/window-exists';
 import { useKeyDown } from '../../hooks';
-import type { FlowbiteBoolean, FlowbitePositions, FlowbiteSizes } from '../Flowbite/FlowbiteTheme';
+import type {
+  FlowbiteBoolean,
+  FlowbitePositions,
+  FlowbiteSizes,
+} from '../Flowbite/FlowbiteTheme';
 import { useTheme } from '../Flowbite/ThemeContext';
 import type { FlowbiteModalBodyTheme } from './ModalBody';
 import { ModalBody } from './ModalBody';
@@ -122,7 +126,7 @@ const ModalComponent: FC<ModalProps> = ({
           theme.root.base,
           theme.root.positions[position],
           show ? theme.root.show.on : theme.root.show.off,
-          className,
+          className
         )}
         {...props}
       >
@@ -131,7 +135,7 @@ const ModalComponent: FC<ModalProps> = ({
         </div>
       </div>
     </ModalContext.Provider>,
-    containerRef.current,
+    containerRef.current
   );
 };
 
@@ -140,4 +144,8 @@ ModalHeader.displayName = 'Modal.Header';
 ModalBody.displayName = 'Modal.Body';
 ModalFooter.displayName = 'Modal.Footer';
 
-export const Modal = Object.assign(ModalComponent, { Header: ModalHeader, Body: ModalBody, Footer: ModalFooter });
+export const Modal = Object.assign(ModalComponent, {
+  Header: ModalHeader,
+  Body: ModalBody,
+  Footer: ModalFooter,
+});

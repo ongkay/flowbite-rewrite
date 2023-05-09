@@ -27,7 +27,10 @@ function cloneDeep<T>(source: T) {
  * @param source The source object from which to copy properties.
  * @return A new merged and deep copied object.
  */
-export function mergeDeep<T extends object, S extends object>(target: T, source: S): T & S {
+export function mergeDeep<T extends object, S extends object>(
+  target: T,
+  source: S
+): T & S {
   if (isObject(source) && Object.keys(source).length === 0) {
     return cloneDeep({ ...target, ...source });
   }
@@ -37,9 +40,14 @@ export function mergeDeep<T extends object, S extends object>(target: T, source:
   if (isObject(source) && isObject(target)) {
     Object.keys(source).forEach((key) => {
       if (isObject(source[key]) && key in target && isObject(target[key])) {
-        (output as Record<string, unknown>)[key] = mergeDeep(target[key] as object, source[key] as object);
+        (output as Record<string, unknown>)[key] = mergeDeep(
+          target[key] as object,
+          source[key] as object
+        );
       } else {
-        (output as Record<string, unknown>)[key] = isObject(source[key]) ? cloneDeep(source[key]) : source[key];
+        (output as Record<string, unknown>)[key] = isObject(source[key])
+          ? cloneDeep(source[key])
+          : source[key];
       }
     });
   }

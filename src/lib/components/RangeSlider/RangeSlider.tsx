@@ -34,17 +34,23 @@ export const RangeSlider = forwardRef<HTMLInputElement, RangeSliderProps>(
 
     return (
       <>
-        <div data-testid="flowbite-range-slider" className={classNames(theme.root.base, className)}>
+        <div
+          data-testid="flowbite-range-slider"
+          className={classNames(theme.root.base, className)}
+        >
           <div className={theme.field.base}>
             <input
               ref={ref}
               type="range"
-              className={classNames(theme.field.input.base, theme.field.input.sizes[sizing])}
+              className={classNames(
+                theme.field.input.base,
+                theme.field.input.sizes[sizing]
+              )}
               {...props}
             />
           </div>
         </div>
       </>
     );
-  },
+  }
 );

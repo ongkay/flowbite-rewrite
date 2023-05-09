@@ -6,7 +6,7 @@ describe('AvatarGroup', () => {
     render(
       <AvatarGroup className="test-class">
         <div>Test child</div>
-      </AvatarGroup>,
+      </AvatarGroup>
     );
     const avatarGroupElement = screen.getByTestId('avatar-group-element');
     expect(avatarGroupElement).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('AvatarGroup', () => {
     render(
       <AvatarGroup theme={{ base: 'custom-base-class' }}>
         <div>Test child</div>
-      </AvatarGroup>,
+      </AvatarGroup>
     );
     const avatarGroupElement = screen.getByTestId('avatar-group-element');
     expect(avatarGroupElement).toHaveClass('custom-base-class');

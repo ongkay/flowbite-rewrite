@@ -43,7 +43,7 @@ const TimelineComponent: FC<TimelineProps> = ({
         className={classNames(
           horizontal && theme.root.direction.horizontal,
           !horizontal && theme.root.direction.vertical,
-          className,
+          className
         )}
         {...props}
       >

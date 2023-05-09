@@ -7,7 +7,8 @@ import { DemoPage } from './DemoPage';
 const AlertsPage: FC = () => {
   const alertText = (
     <span>
-      <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
+      <span className="font-medium">Info alert!</span> Change a few things up and try
+      submitting again.
     </span>
   );
 
@@ -57,8 +58,9 @@ const AlertsPage: FC = () => {
           additionalContent={
             <>
               <div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
-                More info about this info alert goes here. This example text is going to run a bit longer so that you
-                can see how spacing within an alert works with this kind of content.
+                More info about this info alert goes here. This example text is going to
+                run a bit longer so that you can see how spacing within an alert works
+                with this kind of content.
               </div>
               <div className="flex">
                 <button
@@ -79,7 +81,9 @@ const AlertsPage: FC = () => {
           }
           icon={HiInformationCircle}
         >
-          <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
+          <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">
+            This is a info alert
+          </h3>
         </Alert>
       ),
     },
@@ -94,8 +98,9 @@ const AlertsPage: FC = () => {
           additionalContent={
             <>
               <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
-                More info about this info alert goes here. This example text is going to run a bit longer so that you
-                can see how spacing within an alert works with this kind of content.
+                More info about this info alert goes here. This example text is going to
+                run a bit longer so that you can see how spacing within an alert works
+                with this kind of content.
               </div>
               <div className="flex">
                 <button
@@ -116,7 +121,9 @@ const AlertsPage: FC = () => {
           }
           icon={HiInformationCircle}
         >
-          <h3 className="text-lg font-medium text-green-700 dark:text-green-800">This is a info alert</h3>
+          <h3 className="text-lg font-medium text-green-700 dark:text-green-800">
+            This is a info alert
+          </h3>
         </Alert>
       ),
     },

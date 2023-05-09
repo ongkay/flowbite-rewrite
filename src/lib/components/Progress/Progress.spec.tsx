@@ -11,7 +11,14 @@ describe.concurrent('Components / Progress', () => {
     });
 
     it('should use `label` as accessible name', () => {
-      render(<Progress label="Accessible name" labelPosition="outside" labelProgress progress={45} />);
+      render(
+        <Progress
+          label="Accessible name"
+          labelPosition="outside"
+          labelProgress
+          progress={45}
+        />
+      );
 
       expect(progressBar()).toHaveAccessibleName('Accessible name');
     });

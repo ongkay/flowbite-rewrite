@@ -28,7 +28,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop</Table.Cell>
               <Table.Cell>$2999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -41,7 +44,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop PC</Table.Cell>
               <Table.Cell>$1999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -54,7 +60,10 @@ const TablePage: FC = () => {
               <Table.Cell>Accessories</Table.Cell>
               <Table.Cell>$99</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -86,7 +95,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop</Table.Cell>
               <Table.Cell>$2999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -99,7 +111,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop PC</Table.Cell>
               <Table.Cell>$1999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -112,7 +127,10 @@ const TablePage: FC = () => {
               <Table.Cell>Accessories</Table.Cell>
               <Table.Cell>$99</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -125,7 +143,10 @@ const TablePage: FC = () => {
               <Table.Cell>Phone</Table.Cell>
               <Table.Cell>$799</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -138,7 +159,10 @@ const TablePage: FC = () => {
               <Table.Cell>Wearables</Table.Cell>
               <Table.Cell>$999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -170,7 +194,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop</Table.Cell>
               <Table.Cell>$2999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -183,7 +210,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop PC</Table.Cell>
               <Table.Cell>$1999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -196,7 +226,10 @@ const TablePage: FC = () => {
               <Table.Cell>Accessories</Table.Cell>
               <Table.Cell>$99</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -234,7 +267,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop</Table.Cell>
               <Table.Cell>$2999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -250,7 +286,10 @@ const TablePage: FC = () => {
               <Table.Cell>Laptop PC</Table.Cell>
               <Table.Cell>$1999</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>
@@ -266,7 +305,10 @@ const TablePage: FC = () => {
               <Table.Cell>Accessories</Table.Cell>
               <Table.Cell>$99</Table.Cell>
               <Table.Cell>
-                <a href="/tables" className="font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a
+                  href="/tables"
+                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                >
                   Edit
                 </a>
               </Table.Cell>

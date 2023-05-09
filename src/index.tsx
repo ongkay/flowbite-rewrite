@@ -22,6 +22,6 @@ if (container) {
       <BrowserRouter>
         <Root />
       </BrowserRouter>
-    </Flowbite>,
+    </Flowbite>
   );
 }

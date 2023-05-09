@@ -14,14 +14,23 @@ export interface TableRowProps extends PropsWithChildren, ComponentProps<'tr'> {
   theme?: DeepPartial<FlowbiteTableRowTheme>;
 }
 
-export const TableRow: FC<TableRowProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const TableRow: FC<TableRowProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const { hoverable, striped } = useTableContext();
   const theme = mergeDeep(useTheme().theme.table.row, customTheme);
 
   return (
     <tr
       data-testid="table-row-element"
-      className={classNames(striped && theme.striped, hoverable && theme.hovered, className)}
+      className={classNames(
+        striped && theme.striped,
+        hoverable && theme.hovered,
+        className
+      )}
       {...props}
     >
       {children}

@@ -12,8 +12,18 @@ export interface FooterDividerProps extends ComponentProps<'hr'> {
   theme?: DeepPartial<FlowbiteFooterDividerTheme>;
 }
 
-export const FooterDivider: FC<FooterDividerProps> = ({ className, theme: customTheme = {}, ...props }) => {
+export const FooterDivider: FC<FooterDividerProps> = ({
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.footer.divider, customTheme);
 
-  return <hr data-testid="footer-divider" className={classNames(theme.base, className)} {...props} />;
+  return (
+    <hr
+      data-testid="footer-divider"
+      className={classNames(theme.base, className)}
+      {...props}
+    />
+  );
 };

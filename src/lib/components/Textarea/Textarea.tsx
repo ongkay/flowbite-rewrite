@@ -13,7 +13,8 @@ export interface FlowbiteTextareaTheme {
   withShadow: FlowbiteBoolean;
 }
 
-export interface TextareaColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface TextareaColors
+  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
   [key: string]: string;
 }
 
@@ -25,20 +26,28 @@ export interface TextareaProps extends Omit<ComponentProps<'textarea'>, 'color' 
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, color = 'gray', helperText, shadow, theme: customTheme = {}, ...props }, ref) => {
+  (
+    { className, color = 'gray', helperText, shadow, theme: customTheme = {}, ...props },
+    ref
+  ) => {
     const theme = mergeDeep(useTheme().theme.textarea, customTheme);
 
     return (
       <>
         <textarea
           ref={ref}
-          className={classNames(theme.base, theme.colors[color], theme.withShadow[shadow ? 'on' : 'off'], className)}
+          className={classNames(
+            theme.base,
+            theme.colors[color],
+            theme.withShadow[shadow ? 'on' : 'off'],
+            className
+          )}
           {...props}
         />
         {helperText && <HelperText color={color}>{helperText}</HelperText>}
       </>
     );
-  },
+  }
 );
 
 Textarea.displayName = 'Textarea';

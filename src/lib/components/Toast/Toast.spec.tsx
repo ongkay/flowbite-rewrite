@@ -10,7 +10,7 @@ describe.concurrent('Components / Toast', () => {
       render(
         <Toast>
           <Toast.Toggle />
-        </Toast>,
+        </Toast>
       );
 
       await user.tab();

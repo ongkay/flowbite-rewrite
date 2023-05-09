@@ -14,7 +14,12 @@ export interface ModalFooterProps extends PropsWithChildren<ComponentProps<'div'
   theme?: DeepPartial<FlowbiteModalFooterTheme>;
 }
 
-export const ModalFooter: FC<ModalFooterProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+export const ModalFooter: FC<ModalFooterProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.modal.footer, customTheme);
   const { popup } = useModalContext();
 
@@ -25,7 +30,7 @@ export const ModalFooter: FC<ModalFooterProps> = ({ children, className, theme: 
         {
           [theme.popup]: !popup,
         },
-        className,
+        className
       )}
       {...props}
     >

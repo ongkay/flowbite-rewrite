@@ -33,7 +33,7 @@ const PaginationButton: FC<PaginationButtonProps> = ({
         {
           [theme.pages.selector.active]: active,
         },
-        className,
+        className
       )}
       onClick={onClick}
       {...props}

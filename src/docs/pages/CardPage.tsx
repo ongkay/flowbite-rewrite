@@ -16,7 +16,8 @@ const CardPage: FC = () => {
             Noteworthy technology acquisitions 2021
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in
+            reverse chronological order.
           </p>
         </Card>
       ),
@@ -30,7 +31,8 @@ const CardPage: FC = () => {
             Noteworthy technology acquisitions 2021
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in
+            reverse chronological order.
           </p>
           <Button>
             Read more
@@ -60,7 +62,8 @@ const CardPage: FC = () => {
               Noteworthy technology acquisitions 2021
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+              Here are the biggest enterprise technology acquisitions of 2021 so far, in
+              reverse chronological order.
             </p>
           </Card>
         </div>
@@ -79,7 +82,8 @@ const CardPage: FC = () => {
               Noteworthy technology acquisitions 2021
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+              Here are the biggest enterprise technology acquisitions of 2021 so far, in
+              reverse chronological order.
             </p>
           </Card>
         </div>
@@ -95,7 +99,8 @@ const CardPage: FC = () => {
               Noteworthy technology acquisitions 2021
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+              Here are the biggest enterprise technology acquisitions of 2021 so far, in
+              reverse chronological order.
             </p>
           </Card>
         </div>
@@ -141,8 +146,12 @@ const CardPage: FC = () => {
                 src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
                 alt="Bonnie image"
               />
-              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                Bonnie Green
+              </h5>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Visual Designer
+              </span>
               <div className="mt-4 flex space-x-3 lg:mt-6">
                 <a
                   href="#"
@@ -173,7 +182,12 @@ const CardPage: FC = () => {
                 <div className="mb-2 block">
                   <Label htmlFor="email1" value="Your email" />
                 </div>
-                <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+                <TextInput
+                  id="email1"
+                  type="email"
+                  placeholder="name@flowbite.com"
+                  required
+                />
               </div>
               <div>
                 <div className="mb-2 block">
@@ -251,7 +265,9 @@ const CardPage: FC = () => {
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                $599
+              </span>
               <a
                 href="#"
                 className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -268,9 +284,12 @@ const CardPage: FC = () => {
       title: 'Call to action card',
       code: (
         <Card>
-          <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
+          <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+            Work fast from anywhere
+          </h5>
           <p className="mb-5 text-base text-gray-500 dark:text-gray-400 sm:text-lg">
-            Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.
+            Stay up to date and move work forward with Flowbite on iOS & Android. Download
+            the app today.
           </p>
           <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
             <a
@@ -332,8 +351,13 @@ const CardPage: FC = () => {
         <div className="max-w-sm">
           <Card>
             <div className="mb-4 flex items-center justify-between">
-              <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
-              <a href="#" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+              <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
+                Latest Customers
+              </h5>
+              <a
+                href="#"
+                className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+              >
                 View all
               </a>
             </div>
@@ -349,8 +373,12 @@ const CardPage: FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">Neil Sims</p>
-                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">email@windster.com</p>
+                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                        Neil Sims
+                      </p>
+                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+                        email@windster.com
+                      </p>
                     </div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                       $320
@@ -367,8 +395,12 @@ const CardPage: FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">Bonnie Green</p>
-                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">email@windster.com</p>
+                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                        Bonnie Green
+                      </p>
+                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+                        email@windster.com
+                      </p>
                     </div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                       $3467
@@ -385,8 +417,12 @@ const CardPage: FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">Michael Gough</p>
-                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">email@windster.com</p>
+                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                        Michael Gough
+                      </p>
+                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+                        email@windster.com
+                      </p>
                     </div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                       $67
@@ -403,8 +439,12 @@ const CardPage: FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">Lana Byrd</p>
-                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">email@windster.com</p>
+                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                        Lana Byrd
+                      </p>
+                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+                        email@windster.com
+                      </p>
                     </div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                       $367
@@ -421,8 +461,12 @@ const CardPage: FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">Thomes Lean</p>
-                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">email@windster.com</p>
+                      <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                        Thomes Lean
+                      </p>
+                      <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+                        email@windster.com
+                      </p>
                     </div>
                     <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                       $2367
@@ -441,11 +485,15 @@ const CardPage: FC = () => {
       code: (
         <div className="max-w-sm">
           <Card>
-            <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
+            <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+              Standard plan
+            </h5>
             <div className="flex items-baseline text-gray-900 dark:text-white">
               <span className="text-3xl font-semibold">$</span>
               <span className="text-5xl font-extrabold tracking-tight">49</span>
-              <span className="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+              <span className="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">
+                /month
+              </span>
             </div>
             <ul role="list" className="my-7 space-y-5">
               <li className="flex space-x-3">
@@ -512,7 +560,9 @@ const CardPage: FC = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500">Sketch Files</span>
+                <span className="text-base font-normal leading-tight text-gray-500">
+                  Sketch Files
+                </span>
               </li>
               <li className="flex space-x-3 line-through decoration-gray-500">
                 <svg
@@ -527,7 +577,9 @@ const CardPage: FC = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500">API Access</span>
+                <span className="text-base font-normal leading-tight text-gray-500">
+                  API Access
+                </span>
               </li>
               <li className="flex space-x-3 line-through decoration-gray-500">
                 <svg
@@ -542,7 +594,9 @@ const CardPage: FC = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500">Complete documentation</span>
+                <span className="text-base font-normal leading-tight text-gray-500">
+                  Complete documentation
+                </span>
               </li>
               <li className="flex space-x-3 line-through decoration-gray-500">
                 <svg
@@ -557,7 +611,9 @@ const CardPage: FC = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500">24×7 phone & email support</span>
+                <span className="text-base font-normal leading-tight text-gray-500">
+                  24×7 phone & email support
+                </span>
               </li>
             </ul>
             <button
@@ -576,7 +632,9 @@ const CardPage: FC = () => {
       code: (
         <div className="max-w-sm">
           <Card>
-            <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">Connect wallet</h5>
+            <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">
+              Connect wallet
+            </h5>
             <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
               Connect with one of our available wallet providers or create a new one.
             </p>
@@ -586,9 +644,20 @@ const CardPage: FC = () => {
                   href="#"
                   className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
                 >
-                  <svg className="h-4" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z" fill="#E17726" />
-                    <path d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z" fill="#E27625" />
+                  <svg
+                    className="h-4"
+                    viewBox="0 0 40 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z"
+                      fill="#E17726"
+                    />
+                    <path
+                      d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z"
+                      fill="#E27625"
+                    />
                     <path
                       d="M32.1656 27.0093L39.7516 27.1537L37.1004 36.1603L27.8438 33.6116L32.1656 27.0093Z"
                       fill="#E27625"
@@ -605,8 +674,14 @@ const CardPage: FC = () => {
                       d="M22.3831 10.7559L28.7737 16.4397L28.8067 16.4778L31.4455 20.4586L22.1709 20.8806L22.3831 10.7559Z"
                       fill="#E27625"
                     />
-                    <path d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z" fill="#E27625" />
-                    <path d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z" fill="#E27625" />
+                    <path
+                      d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z"
+                      fill="#E27625"
+                    />
+                    <path
+                      d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z"
+                      fill="#E27625"
+                    />
                     <path
                       d="M22.6523 30.6128L28.6066 33.4959L23.0679 36.1282L23.1255 34.3884L22.6523 30.6128Z"
                       fill="#D5BFB2"
@@ -615,10 +690,22 @@ const CardPage: FC = () => {
                       d="M17.3458 30.6143L16.8913 34.3601L16.9286 36.1263L11.377 33.4961L17.3458 30.6143Z"
                       fill="#D5BFB2"
                     />
-                    <path d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z" fill="#233447" />
-                    <path d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z" fill="#233447" />
-                    <path d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z" fill="#CC6228" />
-                    <path d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z" fill="#CC6228" />
+                    <path
+                      d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z"
+                      fill="#233447"
+                    />
+                    <path
+                      d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z"
+                      fill="#233447"
+                    />
+                    <path
+                      d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z"
+                      fill="#CC6228"
+                    />
+                    <path
+                      d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z"
+                      fill="#CC6228"
+                    />
                     <path
                       d="M31.5799 20.0605L27.6165 24.0998L24.5608 22.7034L23.0978 25.779L22.1387 20.4901L31.5799 20.0605Z"
                       fill="#CC6228"
@@ -627,8 +714,14 @@ const CardPage: FC = () => {
                       d="M8.41797 20.0605L17.8608 20.4902L16.9017 25.779L15.4384 22.7038L12.3988 24.0999L8.41797 20.0605Z"
                       fill="#CC6228"
                     />
-                    <path d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z" fill="#E27525" />
-                    <path d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z" fill="#E27525" />
+                    <path
+                      d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z"
+                      fill="#E27525"
+                    />
+                    <path
+                      d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z"
+                      fill="#E27525"
+                    />
                     <path
                       d="M17.6412 19.5088L17.8217 20.6447L18.2676 23.4745L17.9809 32.166L16.6254 25.1841L16.625 25.1119L17.6412 19.5088Z"
                       fill="#E27525"
@@ -685,7 +778,12 @@ const CardPage: FC = () => {
                   href="#"
                   className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
                 >
-                  <svg className="h-5" viewBox="0 0 292 292" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    className="h-5"
+                    viewBox="0 0 292 292"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M145.7 291.66C226.146 291.66 291.36 226.446 291.36 146C291.36 65.5541 226.146 0.339844 145.7 0.339844C65.2542 0.339844 0.0400391 65.5541 0.0400391 146C0.0400391 226.446 65.2542 291.66 145.7 291.66Z"
                       fill="#3259A5"
@@ -757,12 +855,25 @@ const CardPage: FC = () => {
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                   >
                     <defs>
-                      <radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%" id="radialGradient-1">
+                      <radialGradient
+                        cx="0%"
+                        cy="50%"
+                        fx="0%"
+                        fy="50%"
+                        r="100%"
+                        id="radialGradient-1"
+                      >
                         <stop stopColor="#5D9DF6" offset="0%"></stop>
                         <stop stopColor="#006FFF" offset="100%"></stop>
                       </radialGradient>
                     </defs>
-                    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      strokeWidth="1"
+                      fill="none"
+                      fillRule="evenodd"
+                    >
                       <g id="logo">
                         <rect
                           id="base"
@@ -790,7 +901,12 @@ const CardPage: FC = () => {
                   href="#"
                   className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
                 >
-                  <svg className="h-4" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    className="h-4"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M72.0998 0.600098H48.3998H24.5998H0.799805V24.4001V48.2001V49.7001V71.8001V71.9001V95.5001H24.5998V72.0001V71.9001V49.8001V48.3001V24.5001H48.3998H72.1998H95.9998V0.700104H72.0998V0.600098Z"
                       fill="#617BFF"

@@ -59,7 +59,16 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
 
   return (
     <>
-      {name && checked && <input checked={checked} hidden name={name} readOnly type="checkbox" className="sr-only" />}
+      {name && checked && (
+        <input
+          checked={checked}
+          hidden
+          name={name}
+          readOnly
+          type="checkbox"
+          className="sr-only"
+        />
+      )}
       <button
         aria-checked={checked}
         aria-labelledby={`${id}-flowbite-toggleswitch-label`}
@@ -70,7 +79,11 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
         role="switch"
         tabIndex={0}
         type="button"
-        className={classNames(theme.root.base, theme.root.active[disabled ? 'off' : 'on'], className)}
+        className={classNames(
+          theme.root.base,
+          theme.root.active[disabled ? 'off' : 'on'],
+          className
+        )}
         {...props}
       >
         <div
@@ -78,7 +91,7 @@ export const ToggleSwitch: FC<ToggleSwitchProps> = ({
           className={classNames(
             theme.toggle.base,
             theme.toggle.checked[checked ? 'on' : 'off'],
-            !disabled && checked && theme.toggle.checked.color[color],
+            !disabled && checked && theme.toggle.checked.color[color]
           )}
         />
         <span

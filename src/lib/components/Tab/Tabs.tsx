@@ -1,6 +1,21 @@
 import classNames from 'classnames';
-import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react';
-import { Children, forwardRef, useEffect, useId, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import type {
+  ComponentProps,
+  ForwardedRef,
+  KeyboardEvent,
+  PropsWithChildren,
+  ReactElement,
+} from 'react';
+import {
+  Children,
+  forwardRef,
+  useEffect,
+  useId,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import type { DeepPartial } from '..';
 import { mergeDeep } from '../../helpers/mergeDeep';
 import type { FlowbiteBoolean } from '../Flowbite/FlowbiteTheme';
@@ -48,7 +63,9 @@ interface TabKeyboardEventProps extends TabEventProps {
   event: KeyboardEvent<HTMLButtonElement>;
 }
 
-export interface TabsProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'ref' | 'style'> {
+export interface TabsProps
+  extends PropsWithChildren,
+    Omit<ComponentProps<'div'>, 'ref' | 'style'> {
   onActiveTabChange?: (activeTab: number) => void;
   style?: keyof TabStyles;
   theme?: DeepPartial<FlowbiteTabTheme>;
@@ -60,28 +77,39 @@ export interface TabsRef {
 
 export const TabsComponent = forwardRef<TabsRef, TabsProps>(
   (
-    { children, className, onActiveTabChange, style = 'default', theme: customTheme = {}, ...props },
-    ref: ForwardedRef<TabsRef>,
+    {
+      children,
+      className,
+      onActiveTabChange,
+      style = 'default',
+      theme: customTheme = {},
+      ...props
+    },
+    ref: ForwardedRef<TabsRef>
   ) => {
     const theme = mergeDeep(useTheme().theme.tab, customTheme);
 
     const id = useId();
     const tabs = useMemo(
-      () => Children.map(children as ReactElement<PropsWithChildren<TabItemProps>>[], ({ props }) => props),
-      [children],
+      () =>
+        Children.map(
+          children as ReactElement<PropsWithChildren<TabItemProps>>[],
+          ({ props }) => props
+        ),
+      [children]
     );
     const tabRefs = useRef<HTMLButtonElement[]>([]);
     const [activeTab, setActiveTab] = useState(
       Math.max(
         0,
-        tabs.findIndex((tab) => tab.active),
-      ),
+        tabs.findIndex((tab) => tab.active)
+      )
     );
     const [focusedTab, setFocusedTab] = useState(
       Math.max(
         0,
-        tabs.findIndex((tab) => tab.active),
-      ),
+        tabs.findIndex((tab) => tab.active)
+      )
     );
 
     const setActiveTabWithCallback = (activeTab: number) => {
@@ -124,7 +152,11 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
         <div
           aria-label="Tabs"
           role="tablist"
-          className={classNames(theme.tablist.base, theme.tablist.styles[style], className)}
+          className={classNames(
+            theme.tablist.base,
+            theme.tablist.styles[style],
+            className
+          )}
           {...props}
         >
           {tabs.map((tab, index) => (
@@ -139,7 +171,7 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
                 {
                   [tabItemStyle.active.on]: index === activeTab,
                   [tabItemStyle.active.off]: index !== activeTab && !tab.disabled,
-                },
+                }
               )}
               disabled={tab.disabled}
               id={`${id}-tab-${index}`}
@@ -171,7 +203,7 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
         </div>
       </div>
     );
-  },
+  }
 );
 
 TabsComponent.displayName = 'Tabs.Group';

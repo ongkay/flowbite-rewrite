@@ -14,15 +14,35 @@ const PaginationPage: FC = () => {
   const examples: CodeExample[] = [
     {
       title: 'Default pagination',
-      code: <Pagination currentPage={currentPage} totalPages={100} onPageChange={onPageChange} />,
+      code: (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={100}
+          onPageChange={onPageChange}
+        />
+      ),
     },
     {
       title: 'Pagination with icons',
-      code: <Pagination currentPage={currentPage} onPageChange={onPageChange} showIcons totalPages={100} />,
+      code: (
+        <Pagination
+          currentPage={currentPage}
+          onPageChange={onPageChange}
+          showIcons
+          totalPages={100}
+        />
+      ),
     },
     {
       title: 'Previous and next',
-      code: <Pagination currentPage={currentPage} layout="navigation" totalPages={100} onPageChange={onPageChange} />,
+      code: (
+        <Pagination
+          currentPage={currentPage}
+          layout="navigation"
+          totalPages={100}
+          onPageChange={onPageChange}
+        />
+      ),
     },
     {
       title: 'Previous and next with icons',
@@ -40,7 +60,12 @@ const PaginationPage: FC = () => {
       title: 'Table data navigation',
       code: (
         <div className="flex items-center justify-center text-center">
-          <Pagination currentPage={currentPage} layout="table" onPageChange={onPageChange} totalPages={1000} />
+          <Pagination
+            currentPage={currentPage}
+            layout="table"
+            onPageChange={onPageChange}
+            totalPages={1000}
+          />
         </div>
       ),
     },

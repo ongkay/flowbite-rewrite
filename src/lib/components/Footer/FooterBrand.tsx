@@ -19,7 +19,9 @@ export interface FooterBrandProps extends PropsWithChildren {
   theme?: DeepPartial<FlowbiteFooterBrandTheme>;
 }
 
-export const FooterBrand: FC<FooterBrandProps & ComponentProps<'a'> & ComponentProps<'img'>> = ({
+export const FooterBrand: FC<
+  FooterBrandProps & ComponentProps<'a'> & ComponentProps<'img'>
+> = ({
   alt,
   className,
   children,
@@ -34,7 +36,12 @@ export const FooterBrand: FC<FooterBrandProps & ComponentProps<'a'> & ComponentP
   return (
     <div>
       {href ? (
-        <a data-testid="flowbite-footer-brand" href={href} className={classNames(theme.base, className)} {...props}>
+        <a
+          data-testid="flowbite-footer-brand"
+          href={href}
+          className={classNames(theme.base, className)}
+          {...props}
+        >
           <img alt={alt} src={src} className={theme.img} />
           <span data-testid="flowbite-footer-brand-span" className={theme.span}>
             {name}

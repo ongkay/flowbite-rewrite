@@ -8,7 +8,8 @@ import { useTheme } from '../Flowbite/ThemeContext';
 
 export type FlowbiteTooltipTheme = FlowbiteFloatingTheme;
 
-export interface TooltipProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style'>> {
+export interface TooltipProps
+  extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style'>> {
   animation?: false | `duration-${number}`;
   arrow?: boolean;
   content: ReactNode;

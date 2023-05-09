@@ -41,7 +41,10 @@ const SidebarLogo: FC<SidebarLogoProps> = ({
       {...props}
     >
       <img alt={imgAlt} src={img} className={theme.img} />
-      <span className={theme.collapsed[isCollapsed ? 'on' : 'off']} id={`flowbite-sidebar-logo-${id}`}>
+      <span
+        className={theme.collapsed[isCollapsed ? 'on' : 'off']}
+        id={`flowbite-sidebar-logo-${id}`}
+      >
         {children}
       </span>
     </a>

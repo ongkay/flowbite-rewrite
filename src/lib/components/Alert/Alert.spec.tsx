@@ -27,7 +27,7 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(alert()).toHaveClass('text-purple-100');
@@ -42,7 +42,7 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert withBorderAccent />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(alert()).toHaveClass('border-t-4 border-purple-500');
@@ -57,7 +57,7 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(wrapper()).toHaveClass('flex items-center');
@@ -79,14 +79,14 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(alert()).toHaveClass(
-          'text-purple-700 bg-purple-100 border-purple-500 dark:bg-purple-200 dark:text-purple-800',
+          'text-purple-700 bg-purple-100 border-purple-500 dark:bg-purple-200 dark:text-purple-800'
         );
         expect(dismiss()).toHaveClass(
-          'text-purple-500 hover:bg-purple-200 dark:text-purple-600 dark:hover:text-purple-300',
+          'text-purple-500 hover:bg-purple-200 dark:text-purple-600 dark:hover:text-purple-300'
         );
       });
 
@@ -99,7 +99,7 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert icon={HiHeart} />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(icon()).toHaveClass('alert-custom-icon');
@@ -114,7 +114,7 @@ describe.concurrent('Components / Alert', () => {
         render(
           <Flowbite theme={{ theme }}>
             <TestAlert />
-          </Flowbite>,
+          </Flowbite>
         );
 
         expect(alert()).toHaveClass('rounded');
@@ -162,8 +162,9 @@ const TestAlert: FC<AlertProps> = (props: AlertProps) => {
       additionalContent={
         <>
           <div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
-            More info about this info alert goes here. This example text is going to run a bit longer so that you can
-            see how spacing within an alert works with this kind of content.
+            More info about this info alert goes here. This example text is going to run a
+            bit longer so that you can see how spacing within an alert works with this
+            kind of content.
           </div>
           <div className="flex">
             <button

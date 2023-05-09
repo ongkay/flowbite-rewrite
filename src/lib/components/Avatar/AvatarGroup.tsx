@@ -13,11 +13,20 @@ export interface AvatarGroupProps extends PropsWithChildren<ComponentProps<'div'
   theme?: DeepPartial<FlowbiteAvatarGroupTheme>;
 }
 
-const AvatarGroup: React.FC<AvatarGroupProps> = ({ children, className, theme: customTheme = {}, ...props }) => {
+const AvatarGroup: React.FC<AvatarGroupProps> = ({
+  children,
+  className,
+  theme: customTheme = {},
+  ...props
+}) => {
   const theme = mergeDeep(useTheme().theme.avatar.group, customTheme);
 
   return (
-    <div data-testid="avatar-group-element" className={classNames(theme.base, className)} {...props}>
+    <div
+      data-testid="avatar-group-element"
+      className={classNames(theme.base, className)}
+      {...props}
+    >
       {children}
     </div>
   );
